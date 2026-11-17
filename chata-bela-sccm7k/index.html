@@ -1,0 +1,1732 @@
+<!DOCTYPE html>
+<html lang="cs">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Chata Bělá — Celá chata pro rodiny, Bělá u Pecky</title>
+<meta name="description" content="Celá chata pro 12 hostů v Bělé u Pecky. Hrad Pecka 2 km, skiareál v Nové Pace 5 km.">
+<meta name="robots" content="noindex, nofollow, noarchive">
+<meta property="og:type" content="website">
+<meta property="og:title" content="Chata Bělá — Celá chata pro rodiny, Bělá u Pecky">
+<meta property="og:description" content="Celá chata pro 12 hostů v Bělé u Pecky. Hrad Pecka 2 km, skiareál v Nové Pace 5 km.">
+<meta property="og:image" content="https://chatabela.cz/static/img/slide/02.jpg">
+<meta name="theme-color" content="#9A5B3C">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Newsreader:ital,opsz,wght@0,6..72,300;0,6..72,400;0,6..72,500;1,6..72,400&family=Archivo:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>
+/* Šablona webu vily — styly. Bez frameworku, bez build kroku.
+   Barvy jdou přes proměnné na .vs-root; motiv „den" (světlý) je výchozí,
+   „noc" (tmavý, jako villarudolf.com) se zapne data-motiv="noc".
+   Akcent si každý objekt nastaví sám (objekt.json → akcent). */
+
+*{box-sizing:border-box}
+[hidden]{display:none!important}
+html{scroll-behavior:smooth;-webkit-text-size-adjust:100%}
+body{margin:0;background:var(--paper,#F7F3EC)}
+img{max-width:100%;display:block}
+button{font:inherit;color:inherit}
+
+.vs-root{
+  --accent:#A85D32;
+  --accent-ink:#fff;
+  --accent-soft:color-mix(in oklab,var(--accent),#fff 86%);
+  --accent-deep:color-mix(in oklab,var(--accent),#000 22%);
+  --paper:#F7F3EC;
+  --paper-2:#EFE8DC;
+  --card:#FFFFFF;
+  --ink:#1D2320;
+  --ink-soft:#343C37;
+  --muted:#5D665F;
+  --faint:#858C86;
+  --line:rgba(29,35,32,.11);
+  --line-2:rgba(29,35,32,.2);
+  --day-free:#fff;
+  --day-booked:rgba(29,35,32,.05);
+  --shadow:0 12px 34px rgba(24,28,25,.08);
+  --radius:16px;
+  --bar-h:0px;
+  --serif:'Newsreader',Georgia,'Times New Roman',serif;
+  --sans:'Archivo',system-ui,-apple-system,'Segoe UI',sans-serif;
+  background:var(--paper);color:var(--ink);font-family:var(--sans);
+  font-size:16px;line-height:1.6;-webkit-font-smoothing:antialiased;
+  min-height:100vh;overflow-x:clip;
+}
+.vs-root[data-motiv="noc"]{
+  --accent-soft:color-mix(in oklab,var(--accent),#0E1311 78%);
+  --paper:#0E1311;
+  --paper-2:#121A16;
+  --card:#161E1A;
+  --ink:#F0EBE1;
+  --ink-soft:#E3DDD1;
+  --muted:#B2B8AB;
+  --faint:#7E867F;
+  --line:rgba(240,235,225,.10);
+  --line-2:rgba(240,235,225,.2);
+  --day-free:rgba(240,235,225,.06);
+  --day-booked:transparent;
+  --shadow:0 14px 40px rgba(0,0,0,.35);
+}
+.vs-root[data-demo="1"]{--bar-h:44px}
+@media (max-width:600px){.vs-root[data-demo="1"]{--bar-h:52px}}
+
+a{color:inherit}
+.vs-wrap{max-width:1180px;margin:0 auto;padding:0 24px}
+.vs-sec{padding:104px 0}
+.vs-sec.alt{background:var(--paper-2)}
+.vs-eyebrow{display:inline-block;font-size:12px;font-weight:600;letter-spacing:.18em;text-transform:uppercase;color:var(--accent);margin-bottom:14px}
+.vs-root[data-motiv="noc"] .vs-eyebrow{color:color-mix(in oklab,var(--accent),#fff 20%)}
+.vs-h2{font-family:var(--serif);font-weight:400;font-size:clamp(34px,4.4vw,54px);line-height:1.08;letter-spacing:-.01em;margin:0 0 22px}
+.vs-lead{font-size:18px;color:var(--muted);max-width:640px;margin:0}
+.vs-sr{position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0 0 0 0);white-space:nowrap}
+:focus-visible{outline:2px solid var(--accent);outline-offset:3px;border-radius:6px}
+
+/* ---------- Tlačítka ---------- */
+.vs-btn{display:inline-flex;align-items:center;gap:10px;border:0;cursor:pointer;text-decoration:none;
+  background:var(--accent);color:var(--accent-ink);font-weight:600;font-size:15px;padding:15px 24px;border-radius:999px;
+  transition:transform .15s ease,background .2s ease,box-shadow .2s ease;box-shadow:0 8px 22px color-mix(in oklab,var(--accent),transparent 70%)}
+.vs-btn:hover{background:var(--accent-deep);transform:translateY(-1px)}
+.vs-btn.ghost{background:rgba(255,255,255,.12);color:#fff;border:1px solid rgba(255,255,255,.45);box-shadow:none;backdrop-filter:blur(6px)}
+.vs-btn.ghost:hover{background:rgba(255,255,255,.22)}
+.vs-btn.line{background:transparent;color:var(--ink);border:1px solid var(--line-2);box-shadow:none}
+.vs-btn.line:hover{border-color:var(--accent);color:var(--accent)}
+.vs-btn.small{padding:10px 16px;font-size:14px}
+
+/* ---------- Pruh ukázky (jen v demu) ---------- */
+.vs-demobar{position:fixed;top:0;left:0;right:0;height:var(--bar-h);z-index:60;background:#15130F;color:#F4EFE6;
+  display:flex;align-items:center;justify-content:center;gap:14px;padding:0 16px;font-size:13.5px;line-height:1.3}
+.vs-demobar b{font-weight:600}
+.vs-demobar .dot{width:8px;height:8px;border-radius:50%;background:#E9A55B;box-shadow:0 0 0 4px rgba(233,165,91,.18);flex:none}
+.vs-demobar .txt{opacity:.92;overflow:hidden;text-overflow:ellipsis}
+.vs-demobar .sub{opacity:.6;margin-left:6px}
+.vs-demobar button{flex:none;background:#E9A55B;color:#15130F;border:0;border-radius:999px;padding:7px 14px;font-weight:600;font-size:13px;cursor:pointer}
+@media (max-width:760px){.vs-demobar .sub{display:none}}
+@media (max-width:600px){.vs-demobar{justify-content:space-between;font-size:12.5px}.vs-demobar .txt{display:-webkit-box;-webkit-line-clamp:2;-webkit-box-orient:vertical;white-space:normal}}
+
+/* ---------- Navigace ---------- */
+.vs-nav{position:fixed;top:var(--bar-h);left:0;right:0;z-index:50;transition:background .3s ease,box-shadow .3s ease,color .3s ease;color:#fff}
+.vs-nav .in{max-width:1180px;margin:0 auto;padding:0 24px;height:72px;display:flex;align-items:center;gap:28px}
+.vs-logo{font-family:var(--serif);font-size:24px;letter-spacing:.01em;text-decoration:none;white-space:nowrap;overflow:hidden;text-overflow:ellipsis;min-width:0;flex:0 1 auto}
+.vs-links{display:flex;gap:22px;margin-left:auto;font-size:14.5px}
+.vs-links a{text-decoration:none;opacity:.88;white-space:nowrap}
+.vs-links a:hover{opacity:1;text-decoration:underline;text-underline-offset:5px}
+.vs-lang{display:flex;gap:2px;border:1px solid currentColor;border-radius:999px;padding:3px;opacity:.9}
+.vs-lang button{background:none;border:0;cursor:pointer;font-size:12px;font-weight:600;letter-spacing:.06em;padding:5px 8px;border-radius:999px;opacity:.75}
+.vs-lang button[aria-pressed="true"]{background:currentColor;opacity:1}
+.vs-lang button[aria-pressed="true"] span{color:var(--paper)}
+.vs-nav:not(.solid) .vs-lang button[aria-pressed="true"] span{color:#15130F}
+.vs-nav .vs-btn{padding:11px 18px;font-size:14px;white-space:nowrap;flex:none}
+.vs-nav .vs-lang{flex:none}
+.vs-nav.solid{background:color-mix(in oklab,var(--paper),transparent 8%);backdrop-filter:blur(12px);color:var(--ink);box-shadow:0 1px 0 var(--line)}
+.vs-burger{display:none;margin-left:auto;background:none;border:0;cursor:pointer;padding:8px}
+.vs-links .vs-lang{display:none}
+.vs-burger svg{width:26px;height:26px}
+@media (max-width:1120px){
+  .vs-links{display:none}
+  .vs-burger{display:block;margin-left:6px}
+  .vs-nav .in>.vs-lang{margin-left:auto}
+  .vs-nav .vs-btn{display:none}
+  .vs-links.open{display:flex;flex-direction:column;position:absolute;top:72px;left:0;right:0;background:var(--paper);color:var(--ink);padding:18px 24px 26px;gap:16px;font-size:17px;box-shadow:var(--shadow)}
+}
+@media (max-width:600px){
+  .vs-nav .in{gap:12px}
+  .vs-logo{max-width:70vw;font-size:22px}
+  .vs-nav .in>.vs-lang{display:none}
+  .vs-burger{margin-left:auto}
+  .vs-links.open .vs-lang{display:flex;align-self:flex-start;margin-top:6px}
+}
+
+/* ---------- Úvod (hero) ---------- */
+.vs-hero{position:relative;min-height:max(620px,100svh);display:flex;align-items:flex-end;color:#fff;overflow:hidden;background:#222}
+.vs-hero img.bg{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;transform:scale(1.02)}
+.vs-hero::after{content:"";position:absolute;inset:0;background:
+  linear-gradient(90deg,rgba(8,10,9,.5) 0%,rgba(8,10,9,.18) 45%,rgba(8,10,9,0) 70%),
+  linear-gradient(180deg,rgba(8,10,9,.55) 0%,rgba(8,10,9,.06) 24%,rgba(8,10,9,.22) 46%,rgba(8,10,9,.84) 100%)}
+.vs-hero .in{position:relative;z-index:2;width:100%;max-width:1180px;margin:0 auto;padding:0 24px 84px}
+.vs-hero .kicker{font-size:13px;font-weight:600;letter-spacing:.2em;text-transform:uppercase;opacity:.9}
+.vs-hero h1{font-family:var(--serif);font-weight:400;font-size:clamp(46px,8vw,104px);line-height:.98;letter-spacing:-.02em;margin:14px 0 18px;text-wrap:balance}
+.vs-hero .claim{font-size:clamp(17px,1.6vw,20px);max-width:620px;opacity:.94;margin:0 0 26px}
+.vs-chips{display:flex;flex-wrap:wrap;gap:8px;margin-bottom:30px}
+.vs-chip{display:inline-flex;align-items:center;gap:8px;padding:8px 13px;border-radius:999px;background:rgba(255,255,255,.14);border:1px solid rgba(255,255,255,.28);font-size:14px;backdrop-filter:blur(6px)}
+.vs-chip svg{width:17px;height:17px}
+.vs-hero .ctas{display:flex;flex-wrap:wrap;gap:12px}
+.vs-hero .kicker,.vs-hero h1,.vs-hero .claim{text-shadow:0 2px 20px rgba(0,0,0,.35)}
+@media (max-width:600px){
+  .vs-hero .in{padding-bottom:96px}
+  .vs-hero::after{background:linear-gradient(180deg,rgba(8,10,9,.55) 0%,rgba(8,10,9,.18) 26%,rgba(8,10,9,.62) 52%,rgba(8,10,9,.9) 100%)}
+  .vs-hero .kicker{letter-spacing:.14em;font-size:12px}
+}
+
+/* ---------- Hodnocení ---------- */
+.vs-ratings{display:flex;flex-wrap:wrap;gap:12px;align-items:center;justify-content:center;padding:26px 24px;border-bottom:1px solid var(--line)}
+.vs-rating{display:flex;align-items:baseline;gap:8px;padding:8px 16px;border-radius:999px;border:1px solid var(--line);background:var(--card)}
+.vs-rating .sc{font-family:var(--serif);font-size:24px}
+.vs-rating .pl{font-weight:600;font-size:14px}
+.vs-rating .ct{font-size:13px;color:var(--faint)}
+.vs-ratings .chk{font-size:12.5px;color:var(--faint);width:100%;text-align:center}
+
+/* ---------- O domě ---------- */
+.vs-about{display:grid;grid-template-columns:1.25fr 1fr;gap:64px;align-items:start}
+.vs-about .txt p{font-size:18px;color:var(--ink-soft);margin:0 0 18px}
+.vs-about .txt p:first-of-type{font-family:var(--serif);font-size:24px;line-height:1.4;color:var(--ink)}
+.vs-stats{display:grid;grid-template-columns:repeat(2,1fr);background:var(--card);border:1px solid var(--line);border-radius:var(--radius);overflow:hidden;box-shadow:var(--shadow)}
+.vs-stat{padding:24px 26px;border-bottom:1px solid var(--line)}
+.vs-stat:nth-child(odd){border-right:1px solid var(--line)}
+.vs-stat .n{font-family:var(--serif);font-size:44px;line-height:1}
+.vs-stat .l{font-size:13px;color:var(--muted);letter-spacing:.04em;margin-top:8px}
+.vs-highl{list-style:none;padding:0;margin:26px 0 0;display:grid;gap:12px}
+.vs-highl li{display:flex;gap:12px;align-items:flex-start;font-size:16px;color:var(--ink-soft)}
+.vs-highl li::before{content:"";flex:none;width:8px;height:8px;border-radius:50%;margin-top:9px;background:var(--accent)}
+@media (max-width:900px){.vs-about{grid-template-columns:1fr;gap:40px}}
+
+/* ---------- Galerie ---------- */
+.vs-gal{display:grid;grid-template-columns:repeat(4,1fr);grid-auto-rows:210px;gap:10px;margin-top:40px}
+.vs-gal button{position:relative;border:0;padding:0;cursor:zoom-in;overflow:hidden;border-radius:12px;background:var(--paper-2)}
+.vs-gal button img{width:100%;height:100%;object-fit:cover;transition:transform .5s ease}
+.vs-gal button:hover img{transform:scale(1.04)}
+.vs-gal button:first-child{grid-column:span 2;grid-row:span 2}
+.vs-gal button:nth-child(6){grid-column:span 2}
+.vs-gal .more{position:absolute;inset:0;display:flex;align-items:center;justify-content:center;background:rgba(10,12,11,.52);color:#fff;font-weight:600;font-size:15px}
+@media (max-width:900px){.vs-gal{grid-template-columns:repeat(2,1fr);grid-auto-rows:160px}.vs-gal button:nth-child(6){grid-column:auto}}
+
+/* ---------- Vybavení ---------- */
+.vs-amen{display:grid;grid-template-columns:repeat(auto-fill,minmax(200px,1fr));gap:12px;margin-top:40px}
+.vs-am{display:flex;align-items:center;gap:14px;padding:18px;border-radius:14px;background:var(--card);border:1px solid var(--line)}
+.vs-am svg{width:28px;height:28px;flex:none;color:var(--accent)}
+.vs-am span{font-size:15.5px;font-weight:500}
+
+/* ---------- Lokalita ---------- */
+.vs-loc{display:grid;grid-template-columns:1fr 1.25fr;gap:48px;margin-top:40px;align-items:start}
+.vs-near{list-style:none;margin:0;padding:0;border-top:1px solid var(--line)}
+.vs-near li{display:flex;justify-content:space-between;gap:16px;padding:15px 0;border-bottom:1px solid var(--line)}
+.vs-near .w{color:var(--faint);font-size:13px;display:block}
+.vs-near .k{font-family:var(--serif);font-size:22px;white-space:nowrap}
+.vs-map{border-radius:var(--radius);overflow:hidden;border:1px solid var(--line);aspect-ratio:4/3;background:var(--paper-2)}
+.vs-map iframe{width:100%;height:100%;border:0;display:block}
+.vs-maplink{display:inline-block;margin-top:10px;font-size:14px;color:var(--muted)}
+@media (max-width:900px){.vs-loc{grid-template-columns:1fr}}
+
+/* ---------- Ceník ---------- */
+.vs-prices{margin-top:40px;background:var(--card);border:1px solid var(--line);border-radius:var(--radius);overflow:hidden}
+.vs-prices table{width:100%;border-collapse:collapse;font-size:15px}
+.vs-prices th,.vs-prices td{text-align:left;padding:16px 20px;border-bottom:1px solid var(--line);vertical-align:top}
+.vs-prices th{font-size:12px;letter-spacing:.12em;text-transform:uppercase;color:var(--faint);font-weight:600}
+.vs-prices td.p{font-family:var(--serif);font-size:22px;white-space:nowrap}
+.vs-prices td .sub{display:block;font-family:var(--sans);font-size:13px;color:var(--muted)}
+.vs-prices .dates{color:var(--muted);font-size:13.5px}
+.vs-extras{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:0}
+.vs-extras div{padding:16px 20px;border-right:1px solid var(--line);border-top:1px solid var(--line)}
+.vs-extras b{display:block;font-size:12px;letter-spacing:.1em;text-transform:uppercase;color:var(--faint);font-weight:600;margin-bottom:4px}
+.vs-pnote{padding:12px 20px;font-size:13px;color:var(--faint);border-top:1px solid var(--line)}
+@media (max-width:600px){.vs-prices th:nth-child(3),.vs-prices td:nth-child(3){display:none}.vs-prices th,.vs-prices td{padding:14px}}
+
+/* ---------- Rezervace: kalendář + formulář ---------- */
+.vs-book{display:grid;grid-template-columns:1.3fr 1fr;gap:24px;margin-top:28px;align-items:start}
+.vs-calcard,.vs-aside{background:var(--card);border:1px solid var(--line);border-radius:var(--radius);padding:24px;box-shadow:var(--shadow)}
+.vs-aside{position:sticky;top:calc(var(--bar-h) + 88px)}
+.vs-calnav{display:flex;justify-content:space-between;align-items:center;margin-bottom:6px}
+.vs-calnav .hint{font-size:14px;color:var(--muted)}
+.vs-calnav .arr{display:flex;gap:6px}
+.vs-calnav button{width:38px;height:38px;border-radius:50%;border:1px solid var(--line-2);background:none;cursor:pointer;font-size:20px;line-height:1}
+.vs-calnav button:disabled{opacity:.3;cursor:default}
+.vs-cal{display:grid;grid-template-columns:1fr 1fr;gap:28px}
+.vs-cal .ttl{font-family:var(--serif);font-size:21px;text-transform:capitalize;margin:8px 0 12px;text-align:center}
+.vs-grid{display:grid;grid-template-columns:repeat(7,1fr);gap:4px}
+.vs-dow{font-size:11.5px;color:var(--faint);text-align:center;padding-bottom:4px;font-weight:600}
+.vs-day{aspect-ratio:1/1;border-radius:9px;border:1px solid var(--line);background:var(--day-free);cursor:pointer;font-size:14px;font-variant-numeric:tabular-nums;padding:0;position:relative}
+.vs-day:hover{border-color:var(--accent)}
+.vs-day[data-s="e"]{visibility:hidden}
+.vs-day[data-s="p"]{background:none;border-color:transparent;color:var(--faint);opacity:.45;cursor:default}
+.vs-day[data-s="b"]{background:var(--day-booked);border-color:transparent;color:var(--faint);text-decoration:line-through;cursor:not-allowed}
+.vs-day[data-s="c"]{background:linear-gradient(135deg,var(--day-free) 0 50%,var(--day-booked) 50%);}
+.vs-day[data-s="s"]{background:var(--accent);border-color:var(--accent);color:var(--accent-ink);font-weight:700}
+.vs-day[data-s="r"]{background:var(--accent-soft);border-color:transparent}
+.vs-legend{display:flex;flex-wrap:wrap;gap:14px;margin-top:16px;font-size:13px;color:var(--muted)}
+.vs-legend i{display:inline-block;width:14px;height:14px;border-radius:4px;vertical-align:-2px;margin-right:6px;border:1px solid var(--line-2)}
+.vs-demoavail{margin-top:12px;font-size:12.5px;color:var(--faint);display:flex;gap:8px;align-items:flex-start}
+.vs-demoavail::before{content:"i";flex:none;width:16px;height:16px;border-radius:50%;border:1px solid var(--faint);font-size:11px;text-align:center;line-height:14px;font-style:italic;font-family:var(--serif)}
+@media (max-width:1000px){.vs-book{grid-template-columns:1fr}.vs-aside{position:static}}
+@media (max-width:640px){.vs-cal{grid-template-columns:1fr}.vs-cal>div:nth-child(2){display:none}.vs-calcard,.vs-aside{padding:18px}}
+
+.vs-tag{font-size:12px;letter-spacing:.14em;text-transform:uppercase;color:var(--faint);font-weight:600}
+.vs-sel{font-family:var(--serif);font-size:24px;margin:6px 0 14px;line-height:1.25}
+.vs-sel .nl{font-family:var(--sans);font-size:14px;color:var(--muted);display:block}
+.vs-quote{border-top:1px solid var(--line);border-bottom:1px solid var(--line);padding:12px 0;margin-bottom:16px}
+.vs-quote .row{display:flex;justify-content:space-between;gap:12px;padding:5px 0;font-size:14.5px;color:var(--ink-soft)}
+.vs-quote .row .v{font-variant-numeric:tabular-nums;white-space:nowrap}
+.vs-quote .row.tot{font-weight:700;color:var(--ink);font-size:17px;border-top:1px dashed var(--line-2);margin-top:6px;padding-top:10px}
+.vs-quote .row.dep{font-size:13.5px;color:var(--muted)}
+.vs-quote .fx{font-size:12.5px;color:var(--faint);text-align:right}
+.vs-msg{padding:12px 14px;border-radius:10px;background:var(--accent-soft);font-size:14px;margin-bottom:14px}
+.vs-guests{display:grid;grid-template-columns:repeat(3,1fr);gap:10px}
+.vs-field{display:flex;flex-direction:column;gap:6px;margin-bottom:12px}
+.vs-field span{font-size:12.5px;font-weight:600;color:var(--muted);letter-spacing:.02em}
+.vs-field input,.vs-field select,.vs-field textarea{font:inherit;font-size:15px;color:var(--ink);background:var(--paper);border:1px solid var(--line-2);border-radius:10px;padding:11px 12px;width:100%}
+.vs-field textarea{resize:vertical;min-height:76px}
+.vs-field input:focus,.vs-field select:focus,.vs-field textarea:focus{outline:2px solid color-mix(in oklab,var(--accent),transparent 50%);border-color:var(--accent)}
+.vs-extrabox{display:grid;gap:8px;margin:2px 0 14px}
+.vs-extra{display:flex;align-items:center;gap:10px;padding:10px 12px;border:1px solid var(--line-2);border-radius:10px;font-size:14.5px;cursor:pointer}
+.vs-extra input{width:18px;height:18px;accent-color:var(--accent);flex:none}
+.vs-extra em{margin-left:auto;font-style:normal;color:var(--muted);font-size:13px;text-align:right}
+.vs-consent{font-size:12.5px;color:var(--faint);margin:4px 0 14px}
+.vs-submit{width:100%;justify-content:center}
+.vs-note{display:flex;gap:8px;font-size:12.5px;color:var(--muted);margin-top:12px}
+.vs-err{color:#B3261E;font-size:13.5px;margin-bottom:10px}
+.vs-root[data-motiv="noc"] .vs-err{color:#F2B8B5}
+.vs-ok{text-align:center;padding:20px 6px}
+.vs-ok .ic{width:56px;height:56px;border-radius:50%;margin:0 auto 14px;display:flex;align-items:center;justify-content:center;background:var(--accent-soft);color:var(--accent)}
+.vs-ok h3{font-family:var(--serif);font-weight:400;font-size:28px;margin:0 0 8px}
+.vs-ok p{color:var(--muted);margin:0 0 18px}
+
+/* ---------- Praktické info ---------- */
+.vs-info{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:0;margin-top:40px;border-top:1px solid var(--line);border-left:1px solid var(--line)}
+.vs-info div{padding:22px 24px;border-right:1px solid var(--line);border-bottom:1px solid var(--line)}
+.vs-info b{display:block;font-size:12px;letter-spacing:.12em;text-transform:uppercase;color:var(--faint);font-weight:600;margin-bottom:6px}
+.vs-info span{font-size:16.5px}
+
+/* ---------- Patička ---------- */
+.vs-foot{padding:64px 0 120px;border-top:1px solid var(--line);font-size:14.5px;color:var(--muted)}
+.vs-foot .in{display:grid;grid-template-columns:1.4fr 1fr 1fr;gap:32px}
+.vs-foot .nm{font-family:var(--serif);font-size:28px;color:var(--ink);margin-bottom:8px}
+.vs-foot a{color:var(--muted)}
+.vs-foot .made{margin-top:40px;font-size:12.5px;color:var(--faint)}
+@media (max-width:800px){.vs-foot .in{grid-template-columns:1fr}}
+
+/* ---------- Lightbox ---------- */
+.vs-lb{position:fixed;inset:0;z-index:90;background:rgba(8,9,9,.94);display:none;align-items:center;justify-content:center}
+.vs-lb.open{display:flex}
+.vs-lb img{max-width:min(92vw,1600px);max-height:84vh;object-fit:contain;border-radius:6px;user-select:none}
+.vs-lb .cap{position:absolute;bottom:22px;left:0;right:0;text-align:center;color:#ddd;font-size:14px}
+.vs-lb button{position:absolute;background:rgba(255,255,255,.1);border:1px solid rgba(255,255,255,.25);color:#fff;width:48px;height:48px;border-radius:50%;cursor:pointer;font-size:22px;line-height:1}
+.vs-lb .x{top:calc(var(--bar-h) + 16px);right:18px}
+.vs-lb .pv{left:18px;top:50%;transform:translateY(-50%)}
+.vs-lb .nx{right:18px;top:50%;transform:translateY(-50%)}
+@media (max-width:600px){.vs-lb .pv,.vs-lb .nx{top:auto;bottom:56px;transform:none}}
+
+/* ---------- Tlačítko a panel pro majitele (jen v demu) ---------- */
+.vs-fab{position:fixed;right:20px;bottom:20px;z-index:70;display:flex;align-items:center;gap:10px;background:#15130F;color:#F4EFE6;border:0;border-radius:999px;padding:14px 20px;font-weight:600;font-size:15px;cursor:pointer;box-shadow:0 14px 36px rgba(0,0,0,.28)}
+.vs-fab .dot{width:9px;height:9px;border-radius:50%;background:#E9A55B;box-shadow:0 0 0 4px rgba(233,165,91,.2)}
+.vs-fab:hover{transform:translateY(-1px)}
+@media (max-width:600px){.vs-fab{right:12px;bottom:12px;padding:11px 15px;font-size:14px}.vs-fab .long{display:none}}
+
+.vs-owner{position:fixed;inset:0;z-index:80;display:none}
+.vs-owner.open{display:block}
+.vs-owner .shade{position:absolute;inset:0;background:rgba(10,10,10,.45)}
+.vs-owner .panel{position:absolute;top:0;right:0;bottom:0;width:min(760px,100vw);background:#FBF8F3;color:#1D2320;display:flex;flex-direction:column;box-shadow:-20px 0 60px rgba(0,0,0,.25);font-size:15px;line-height:1.55}
+.vs-owner header{padding:22px 26px 0;border-bottom:1px solid rgba(29,35,32,.1)}
+.vs-owner header .top{display:flex;justify-content:space-between;align-items:flex-start;gap:16px}
+.vs-owner header h2{font-family:var(--serif);font-weight:400;font-size:30px;line-height:1.15;margin:4px 0 6px}
+.vs-owner header p{margin:0 0 14px;color:#5D665F;font-size:14.5px}
+.vs-owner .close{background:none;border:1px solid rgba(29,35,32,.2);border-radius:50%;width:40px;height:40px;cursor:pointer;font-size:20px;flex:none}
+.vs-tabs{display:flex;gap:4px;overflow-x:auto;scrollbar-width:none}
+.vs-tabs button{background:none;border:0;border-bottom:2px solid transparent;padding:12px 12px 13px;cursor:pointer;font-weight:600;font-size:14px;color:#5D665F;white-space:nowrap}
+.vs-tabs button[aria-selected="true"]{color:#1D2320;border-bottom-color:#B8642F}
+.vs-owner .body{flex:1;overflow-y:auto;padding:26px}
+.vs-owner h3{font-family:var(--serif);font-weight:400;font-size:24px;margin:28px 0 12px}
+.vs-owner h3:first-child{margin-top:0}
+.vs-owner .muted{color:#5D665F}
+.vs-owner .small{font-size:13px;color:#6E766F}
+.vs-pack{border:1px solid rgba(29,35,32,.14);border-radius:16px;padding:22px;background:#fff}
+.vs-pack .pr{display:flex;align-items:baseline;gap:10px;flex-wrap:wrap;margin:4px 0 6px}
+.vs-pack .pr b{font-family:var(--serif);font-weight:400;font-size:40px;line-height:1}
+.vs-pack .pr s{color:#8A918B}
+.vs-pack ul{margin:14px 0 0;padding:0;list-style:none;display:grid;gap:8px}
+.vs-pack li{display:flex;gap:10px}
+.vs-pack li::before{content:"✓";color:#2F7D57;font-weight:700;flex:none}
+.vs-mods{display:grid;gap:10px}
+.vs-mod{display:grid;grid-template-columns:1fr auto;gap:4px 16px;padding:16px 18px;border:1px solid rgba(29,35,32,.12);border-radius:14px;background:#fff}
+.vs-mod .n{font-weight:600}
+.vs-mod .p{font-family:var(--serif);font-size:20px;white-space:nowrap;text-align:right}
+.vs-mod .d{grid-column:1 / -1;color:#5D665F;font-size:14px}
+.vs-mod.soon{opacity:.75}
+.vs-flow{display:grid;gap:10px;counter-reset:f}
+.vs-flow li{list-style:none;position:relative;padding:14px 16px 14px 56px;background:#fff;border:1px solid rgba(29,35,32,.12);border-radius:14px}
+.vs-flow li::before{counter-increment:f;content:counter(f);position:absolute;left:16px;top:14px;width:26px;height:26px;border-radius:50%;background:#1D2320;color:#fff;font-size:13px;font-weight:700;display:flex;align-items:center;justify-content:center}
+.vs-flow li b{display:block}
+.vs-calc{display:grid;grid-template-columns:1fr 1fr;gap:12px}
+.vs-calc label{display:flex;flex-direction:column;gap:6px;font-size:13px;font-weight:600;color:#5D665F}
+.vs-calc input,.vs-calc select{font:inherit;font-size:15px;padding:10px 12px;border:1px solid rgba(29,35,32,.2);border-radius:10px;background:#fff;color:#1D2320}
+.vs-res{margin-top:16px;padding:20px;border-radius:16px;background:#1D2320;color:#F4EFE6}
+.vs-res .big{font-family:var(--serif);font-size:38px;line-height:1.1}
+.vs-res .row{display:flex;justify-content:space-between;gap:12px;padding:4px 0;font-size:14.5px;opacity:.92}
+.vs-cta{display:flex;flex-wrap:wrap;gap:10px;margin-top:22px;padding-top:22px;border-top:1px solid rgba(29,35,32,.1)}
+.vs-cta a{background:#B8642F;color:#fff;text-decoration:none;font-weight:600;padding:13px 20px;border-radius:999px}
+.vs-cta a.sec{background:none;color:#1D2320;border:1px solid rgba(29,35,32,.25)}
+@media (max-width:600px){.vs-calc{grid-template-columns:1fr}.vs-owner .body{padding:20px}.vs-owner header{padding:18px 20px 0}}
+
+/* Ukázka administrace v panelu */
+.vs-adm{border:1px solid rgba(29,35,32,.14);border-radius:16px;background:#fff;overflow:hidden}
+.vs-adm .bar{display:flex;align-items:center;gap:8px;padding:10px 14px;background:#F1ECE3;border-bottom:1px solid rgba(29,35,32,.1);font-size:12.5px;color:#5D665F}
+.vs-adm .bar i{width:10px;height:10px;border-radius:50%;background:#D9D2C6;display:inline-block}
+.vs-adm table{width:100%;border-collapse:collapse;font-size:14px}
+.vs-adm th,.vs-adm td{padding:10px 12px;border-bottom:1px solid rgba(29,35,32,.08);text-align:left}
+.vs-adm th{font-size:11.5px;letter-spacing:.1em;text-transform:uppercase;color:#858C86;font-weight:600}
+.vs-adm input{font:inherit;width:110px;padding:7px 9px;border:1px solid rgba(29,35,32,.2);border-radius:8px;font-variant-numeric:tabular-nums}
+.vs-adm .ok{color:#2F7D57;font-size:13px;padding:10px 14px}
+.vs-pill{display:inline-block;padding:3px 9px;border-radius:999px;font-size:12px;font-weight:600}
+.vs-pill.new{background:#FDECC8;color:#7A4B00}
+.vs-pill.hold{background:#DCE9F9;color:#1D4E89}
+.vs-pill.paid{background:#D7F0E1;color:#1E6B41}
+.vs-tl{padding:14px}
+.vs-tl .m{font-size:12px;color:#858C86;margin:8px 0 6px;text-transform:capitalize}
+.vs-tl .lane{position:relative;height:30px;background:repeating-linear-gradient(90deg,#F6F2EB 0 calc(100%/31 - 1px),#ECE6DC calc(100%/31 - 1px) calc(100%/31));border-radius:6px;margin-bottom:4px}
+.vs-tl .bk{position:absolute;top:4px;bottom:4px;border-radius:5px;font-size:11px;color:#fff;padding:0 6px;display:flex;align-items:center;overflow:hidden;white-space:nowrap}
+.vs-tl .bk.airbnb{background:#E0565B}.vs-tl .bk.booking{background:#2C5DA9}.vs-tl .bk.primo{background:#2F7D57}.vs-tl .bk.echalupy{background:#C9822F}
+.vs-tl .lg{display:flex;flex-wrap:wrap;gap:12px;font-size:12px;color:#5D665F;margin-top:8px}
+.vs-tl .lg i{display:inline-block;width:10px;height:10px;border-radius:3px;margin-right:5px}
+
+@media (prefers-reduced-motion:reduce){*{transition:none!important;scroll-behavior:auto!important}}
+
+</style>
+</head>
+<body>
+<div class="vs-root">
+
+  <div class="vs-demobar" id="vs-demobar" hidden>
+    <span class="dot" aria-hidden="true"></span>
+    <span class="txt"></span>
+    <button type="button">Co tento web umí</button>
+  </div>
+
+  <header class="vs-nav" id="vs-nav"></header>
+
+  <section class="vs-hero" id="top"></section>
+
+  <div class="vs-ratings" id="vs-ratings" hidden></div>
+
+  <section class="vs-sec" id="o-dome"><div class="vs-wrap"><div class="in vs-about"></div></div></section>
+
+  <section class="vs-sec alt" id="fotky">
+    <div class="vs-wrap">
+      <span class="vs-eyebrow"></span>
+      <h2 class="vs-h2"></h2>
+      <div class="vs-gal" id="vs-gal"></div>
+    </div>
+  </section>
+
+  <section class="vs-sec" id="vybaveni">
+    <div class="vs-wrap">
+      <span class="vs-eyebrow"></span>
+      <h2 class="vs-h2"></h2>
+      <div class="vs-amen" id="vs-amen"></div>
+    </div>
+  </section>
+
+  <section class="vs-sec alt" id="okoli">
+    <div class="vs-wrap">
+      <span class="vs-eyebrow"></span>
+      <h2 class="vs-h2"></h2>
+      <p class="vs-lead"></p>
+      <div class="vs-loc">
+        <ul class="vs-near" id="vs-near"></ul>
+        <div>
+          <div class="vs-map" id="vs-map"></div>
+          <a class="vs-maplink" id="vs-maplink" href="#" target="_blank" rel="noopener"></a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="vs-sec" id="ceny">
+    <div class="vs-wrap">
+      <span class="vs-eyebrow"></span>
+      <h2 class="vs-h2"></h2>
+      <p class="vs-lead"></p>
+      <div class="vs-prices" id="vs-prices"></div>
+      <div class="vs-book">
+        <div class="vs-calcard">
+          <div class="vs-calnav">
+            <span class="hint" id="vs-calhint"></span>
+            <span class="arr">
+              <button type="button" id="vs-prev"><span aria-hidden="true">&#8249;</span></button>
+              <button type="button" id="vs-next"><span aria-hidden="true">&#8250;</span></button>
+            </span>
+          </div>
+          <div class="vs-cal" id="vs-cal"></div>
+          <div class="vs-msg" id="vs-calmsg" role="status" hidden></div>
+          <div class="vs-legend" id="vs-legend"></div>
+          <div class="vs-demoavail" id="vs-demoavail"></div>
+        </div>
+        <aside class="vs-aside">
+          <form id="vs-form" novalidate>
+            <span class="vs-tag" data-t="book.summary"></span>
+            <div class="vs-sel" id="vs-selbox" aria-live="polite"></div>
+            <div class="vs-msg" id="vs-qmsg" role="status" hidden></div>
+            <div class="vs-quote" id="vs-quote" aria-live="polite" hidden></div>
+            <div class="vs-guests">
+              <label class="vs-field"><span data-t="form.adults"></span><input id="vs-adults" type="number" min="1" value="2" inputmode="numeric"></label>
+              <label class="vs-field"><span data-t="form.children"></span><input id="vs-children" type="number" min="0" value="0" inputmode="numeric"></label>
+              <label class="vs-field" id="vs-petsfield"><span data-t="form.pets"></span>
+                <select id="vs-pets"><option value="0">0</option><option value="1">1</option><option value="2">2</option><option value="3">3</option></select>
+              </label>
+            </div>
+            <div class="vs-extrabox" id="vs-extras" hidden></div>
+            <label class="vs-field"><span data-t="form.name"></span><input id="vs-name" type="text" autocomplete="name" data-ph="form.phName"></label>
+            <label class="vs-field"><span data-t="form.email"></span><input id="vs-email" type="email" autocomplete="email" data-ph="form.phEmail"></label>
+            <label class="vs-field"><span data-t="form.phone"></span><input id="vs-phone" type="tel" autocomplete="tel" data-ph="form.phPhone"></label>
+            <label class="vs-field"><span data-t="form.message"></span><textarea id="vs-message" rows="3" maxlength="2000" data-ph="form.phMessage"></textarea></label>
+            <div class="vs-err" id="vs-ferr" role="alert" hidden></div>
+            <p class="vs-consent" data-t="form.consent"></p>
+            <button class="vs-btn vs-submit" type="submit" data-t="form.submit"></button>
+            <div class="vs-note" data-t="form.note"></div>
+          </form>
+          <div class="vs-ok" id="vs-ok" role="status" hidden>
+            <div class="ic" aria-hidden="true">&#10003;</div>
+            <h3></h3>
+            <p></p>
+            <button type="button" class="vs-btn line small" id="vs-again"></button>
+          </div>
+        </aside>
+      </div>
+    </div>
+  </section>
+
+  <section class="vs-sec alt" id="info">
+    <div class="vs-wrap">
+      <span class="vs-eyebrow"></span>
+      <h2 class="vs-h2"></h2>
+      <div class="vs-info" id="vs-info"></div>
+    </div>
+  </section>
+
+  <footer class="vs-foot"><div class="vs-wrap" id="vs-foot"></div></footer>
+
+  <div class="vs-lb" id="vs-lb" role="dialog" aria-modal="true">
+    <button class="x" type="button">&times;</button>
+    <button class="pv" type="button">&#8249;</button>
+    <img alt="">
+    <button class="nx" type="button">&#8250;</button>
+    <div class="cap"></div>
+  </div>
+
+  <button class="vs-fab" id="vs-fab" type="button" hidden><span class="dot" aria-hidden="true"></span><span>Pro majitele<span class="long">: co tento web umí</span></span></button>
+
+  <div class="vs-owner" id="vs-owner" role="dialog" aria-modal="true" aria-labelledby="vs-otitle">
+    <div class="shade"></div>
+    <div class="panel">
+      <header>
+        <div class="top">
+          <div>
+            <span class="vs-eyebrow">Pro majitele</span>
+            <h2 id="vs-otitle">Váš vlastní web s přímými rezervacemi</h2>
+            <p>Tuhle ukázku jsem postavil z veřejných údajů o vaší chalupě (fotky jsou vaše — jen pro tuto neveřejnou ukázku, na požádání ji smažu). Ostrý web běží na adrese psané na vaše jméno, je napojený na vaše kalendáře a poptávky chodí rovnou vám — bez provize.</p>
+          </div>
+          <button class="close" type="button" aria-label="Zavřít">&times;</button>
+        </div>
+        <div class="vs-tabs" id="vs-otabs" role="tablist"></div>
+      </header>
+      <div class="body" id="vs-obody"></div>
+    </div>
+  </div>
+
+</div>
+<script>
+/* Šablona webu vily — texty rozhraní ve 4 jazycích (cs / en / de / pl).
+   Texty KONKRÉTNÍHO objektu (název, popis, okolí…) sem nepatří — ty jsou
+   v dema/<id>/objekt.json. Tady je jen to, co je pro všechny weby stejné.
+   Zástupné znaky {n}, {d}, {p}, {name} doplní sablona.js. */
+'use strict';
+
+const TEXTY = {
+  cs: {
+    nav: { about: 'O domě', photos: 'Fotky', amenities: 'Vybavení', location: 'Okolí', prices: 'Ceny a termíny', book: 'Ověřit termín' },
+    hero: { guests: 'až {n} hostů', bedrooms: '{n} ložnic|{n} ložnice|{n} ložnice', bathrooms: '{n} koupelen|{n} koupelna|{n} koupelny', check: 'Zkontrolovat volné termíny', photos: 'Prohlédnout fotky' },
+    facts: { kapacita: 'Hostů', loznice: 'Ložnic', koupelny: 'Koupelen', luzka: 'Lůžek', plocha: 'm² domu', pozemek: 'm² pozemku', vyska: 'm n. m.' },
+    rating: { title: 'Jak dům hodnotí hosté', checked: 'ověřeno {d}', reviews: '{n} hodnocení' },
+    about: { eyebrow: 'O domě', whole: 'Celý dům jen pro vaši skupinu' },
+    gallery: { eyebrow: 'Fotogalerie', title: 'Podívejte se dovnitř', all: 'Zobrazit všech {n} fotek' },
+    amen: { eyebrow: 'Vybavení', title: 'Na co se můžete těšit' },
+    loc: { eyebrow: 'Lokalita', title: 'Kde dům najdete', near: 'V okolí', km: 'km', map: 'Otevřít větší mapu', approx: 'Poloha je orientační.' },
+    book: {
+      eyebrow: 'Ceny a termíny', title: 'Vyberte termín a pošlete poptávku',
+      body: 'Ceny jsou za celý dům. Vyberte v kalendáři příjezd a odjezd — cenu spočítáme hned.',
+      bodyPerson: 'Vyberte v kalendáři příjezd a odjezd — cenu spočítáme hned.',
+      season: 'Období', price: 'Cena', nightly: 'Cena za noc', perPerson: 'za osobu a noc', perHouse: 'za celý dům', minStay: 'Min. pobyt',
+      nights: '{n} nocí|{n} noc|{n} noci', weekend: 'víkend (2 noci) {p}',
+      cleaning: 'Závěrečný úklid', localFee: 'Poplatek z pobytu', localFeeVal: '{p} / dospělý a noc',
+      pets: 'Domácí mazlíček', petsVal: '{p} za pobyt', petsNight: '{p} za noc', noPets: 'Bez zvířat', bond: 'Vratná kauce', deposit: 'Záloha po potvrzení',
+      holiday: 'Vánoce a Silvestr', holidayVal: 'individuální cena — napište si o nabídku',
+      indicative: 'Ceny jsou orientační.',
+      free: 'Volno', booked: 'Obsazeno', chosen: 'Váš pobyt', checkoutOnly: 'jen odjezd',
+      prev: 'Předchozí měsíce', next: 'Další měsíce',
+      pickArrival: 'Vyberte den příjezdu', pickDeparture: 'Teď vyberte den odjezdu',
+      demoAvail: 'Ukázková obsazenost. Na ostrém webu se kalendář sám načítá z Airbnb, Bookingu a dalších portálů.',
+      summary: 'Vaše poptávka', accommodation: 'Ubytování', total: 'Celkem', depositLine: 'Záloha {p} %',
+      minStayMsg: 'V tomto období je minimální pobyt {n}.', holidayMsg: 'Pro tento termín platí individuální cena. Pošlete poptávku a majitel vám pošle nabídku.',
+      overMsg: 'Dům je pro nejvýše {n} hostů.', minPersons: 'účtuje se min. {n} osob', blockedMsg: 'V tomto rozmezí je už obsazeno — vyberte jiný termín.',
+      perNight: '{p} × {n}',
+      askMsg: 'Pro tuto délku pobytu vám majitel pošle cenu na poptávku.', dayMsg: 'V tomto období se přijíždí {d}.', maxMsg: 'V tomto období lze rezervovat nejvýše {n}.',
+      discount: 'Noc zdarma za každý týden', extraTier: '{p} do {n} nocí, déle {q}', extras: 'Příplatky',
+      week: 'týden', weeks: '{n} týdnů|týden|{n} týdny', weekendFri: 'víkend {od}–{do}', otherNight: 'jiné pobyty {p}/noc', minWeek: 'týden, nebo víkend',
+      package: 'Balíček', packageSub: 'cena za celý pobyt', packageMsg: '{name} ({od}–{do}) pronajímáme jako balíček za {p}. Vyberte v kalendáři přesně tyto dny, nebo pošlete poptávku.',
+    },
+    form: {
+      adults: 'Dospělí', children: 'Děti', pets: 'Mazlíčci', name: 'Jméno', email: 'E-mail', phone: 'Telefon', message: 'Zpráva',
+      phName: 'Vaše jméno', phEmail: 'vas@email.cz', phPhone: '+420… (nepovinné)', phMessage: 'Cokoli, co by měl majitel vědět (nepovinné)',
+      consent: 'Odesláním berete na vědomí ubytovací podmínky a zpracování osobních údajů.',
+      submit: 'Odeslat nezávaznou poptávku', note: 'Poptávka je nezávazná — nic neplatíte. Termín potvrdí majitel osobně.',
+      errDates: 'Vyberte nejdřív termín v kalendáři.', errName: 'Vyplňte jméno.', errEmail: 'Zkontrolujte e-mail.',
+      okTitle: 'Tohle je ukázka', okBody: 'V ukázce se nic neodesílá. Na ostrém webu by teď majitel dostal zprávu do mobilu i e-mailem a vy potvrzení se shrnutím pobytu.',
+      again: 'Zpět k formuláři',
+    },
+    info: {
+      eyebrow: 'Praktické', title: 'Než přijedete', checkin: 'Příjezd', checkout: 'Odjezd', from: 'od {p}', until: 'do {p}',
+      pets: 'Zvířata', petsYes: 'Vítána', petsNo: 'Nejsou povolena', smoking: 'Kouření', smokingNo: 'Uvnitř zakázáno', smokingOut: 'Jen venku',
+      parties: 'Akce a oslavy', partiesAsk: 'Po domluvě s majitelem', partiesNo: 'Nejsou povoleny', quiet: 'Noční klid', parking: 'Parkování', payment: 'Platba',
+      paymentVal: 'Záloha {p} % po potvrzení termínu, doplatek před příjezdem. Převodem s QR kódem.',
+    },
+    foot: { contact: 'Kontakt', terms: 'Ubytovací podmínky', privacy: 'Ochrana osobních údajů', made: 'Web s přímými rezervacemi', contactDemo: 'Kontakt majitele doplním po schválení.' },
+    lb: { close: 'Zavřít', prev: 'Předchozí fotka', next: 'Další fotka' },
+    months: ['leden', 'únor', 'březen', 'duben', 'květen', 'červen', 'červenec', 'srpen', 'září', 'říjen', 'listopad', 'prosinec'],
+    dow: ['Po', 'Út', 'St', 'Čt', 'Pá', 'So', 'Ne'],
+    dowOn: ['v pondělí', 'v úterý', 've středu', 've čtvrtek', 'v pátek', 'v sobotu', 'v neděli'],
+  },
+
+  en: {
+    nav: { about: 'The house', photos: 'Photos', amenities: 'Amenities', location: 'Location', prices: 'Prices & dates', book: 'Check dates' },
+    hero: { guests: 'up to {n} guests', bedrooms: '{n} bedrooms|{n} bedroom|{n} bedrooms', bathrooms: '{n} bathrooms|{n} bathroom|{n} bathrooms', check: 'Check availability', photos: 'See the photos' },
+    facts: { kapacita: 'Guests', loznice: 'Bedrooms', koupelny: 'Bathrooms', luzka: 'Beds', plocha: 'm² house', pozemek: 'm² grounds', vyska: 'm a.s.l.' },
+    rating: { title: 'What guests say', checked: 'checked {d}', reviews: '{n} reviews' },
+    about: { eyebrow: 'The house', whole: 'The whole house just for your group' },
+    gallery: { eyebrow: 'Gallery', title: 'Take a look inside', all: 'Show all {n} photos' },
+    amen: { eyebrow: 'Amenities', title: 'What you can look forward to' },
+    loc: { eyebrow: 'Location', title: 'Where to find us', near: 'Nearby', km: 'km', map: 'Open larger map', approx: 'Location is approximate.' },
+    book: {
+      eyebrow: 'Prices & dates', title: 'Pick your dates and send an enquiry',
+      body: 'Prices are for the whole house. Choose arrival and departure in the calendar — we calculate the price instantly.',
+      bodyPerson: 'Choose arrival and departure in the calendar — we calculate the price instantly.',
+      season: 'Season', price: 'Price', nightly: 'Per night', perPerson: 'per person per night', perHouse: 'whole house', minStay: 'Min. stay',
+      nights: '{n} nights|{n} night|{n} nights', weekend: 'weekend (2 nights) {p}',
+      cleaning: 'Final cleaning', localFee: 'Local tourist tax', localFeeVal: '{p} / adult per night',
+      pets: 'Pet', petsVal: '{p} per stay', petsNight: '{p} per night', noPets: 'No pets', bond: 'Refundable deposit', deposit: 'Down payment after confirmation',
+      holiday: 'Christmas & New Year', holidayVal: 'individual price — ask for an offer',
+      indicative: 'Prices are indicative.',
+      free: 'Available', booked: 'Booked', chosen: 'Your stay', checkoutOnly: 'check-out only',
+      prev: 'Previous months', next: 'Next months',
+      pickArrival: 'Select your arrival day', pickDeparture: 'Now select your departure day',
+      demoAvail: 'Sample availability. On the live site the calendar syncs itself from Airbnb, Booking.com and other portals.',
+      summary: 'Your enquiry', accommodation: 'Accommodation', total: 'Total', depositLine: 'Down payment {p}%',
+      minStayMsg: 'Minimum stay in this period is {n}.', holidayMsg: 'An individual price applies to these dates. Send an enquiry and the owner will make you an offer.',
+      overMsg: 'The house sleeps at most {n} guests.', minPersons: 'min. {n} persons charged', blockedMsg: 'Some nights in this range are booked — please pick other dates.',
+      perNight: '{p} × {n}',
+      askMsg: 'For this length of stay the owner will send you a price on request.', dayMsg: 'In this period arrivals are {d}.', maxMsg: 'In this period the maximum stay is {n}.',
+      discount: 'Free night for every week', extraTier: '{p} up to {n} nights, longer {q}', extras: 'Extras',
+      week: 'week', weeks: '{n} weeks|1 week|{n} weeks', weekendFri: 'weekend {od}–{do}', otherNight: 'other stays {p}/night', minWeek: 'a week, or a weekend',
+      package: 'Package', packageSub: 'price for the whole stay', packageMsg: '{name} ({od}–{do}) is let as a package for {p}. Select exactly these dates, or send an enquiry.',
+    },
+    form: {
+      adults: 'Adults', children: 'Children', pets: 'Pets', name: 'Name', email: 'E-mail', phone: 'Phone', message: 'Message',
+      phName: 'Your name', phEmail: 'you@email.com', phPhone: '+44… (optional)', phMessage: 'Anything the owner should know (optional)',
+      consent: 'By sending you acknowledge the terms of stay and the privacy policy.',
+      submit: 'Send a free enquiry', note: 'The enquiry is non-binding — you pay nothing now. The owner confirms the dates personally.',
+      errDates: 'Please select your dates first.', errName: 'Please enter your name.', errEmail: 'Please check your e-mail.',
+      okTitle: 'This is a demo', okBody: 'Nothing is sent in the demo. On the live site the owner would now get a message on their phone and by e-mail, and you a confirmation with a summary.',
+      again: 'Back to the form',
+    },
+    info: {
+      eyebrow: 'Practical', title: 'Before you arrive', checkin: 'Check-in', checkout: 'Check-out', from: 'from {p}', until: 'until {p}',
+      pets: 'Pets', petsYes: 'Welcome', petsNo: 'Not allowed', smoking: 'Smoking', smokingNo: 'Not indoors', smokingOut: 'Outside only',
+      parties: 'Events & parties', partiesAsk: 'By arrangement', partiesNo: 'Not allowed', quiet: 'Quiet hours', parking: 'Parking', payment: 'Payment',
+      paymentVal: '{p}% down payment once the dates are confirmed, balance before arrival. Bank transfer with QR code.',
+    },
+    foot: { contact: 'Contact', terms: 'Terms of stay', privacy: 'Privacy policy', made: 'Website with direct booking', contactDemo: 'Owner contact will be added after approval.' },
+    lb: { close: 'Close', prev: 'Previous photo', next: 'Next photo' },
+    months: ['January', 'February', 'March', 'April', 'May', 'June', 'July', 'August', 'September', 'October', 'November', 'December'],
+    dow: ['Mo', 'Tu', 'We', 'Th', 'Fr', 'Sa', 'Su'],
+    dowOn: ['on Monday', 'on Tuesday', 'on Wednesday', 'on Thursday', 'on Friday', 'on Saturday', 'on Sunday'],
+  },
+
+  de: {
+    nav: { about: 'Das Haus', photos: 'Fotos', amenities: 'Ausstattung', location: 'Lage', prices: 'Preise & Termine', book: 'Termin prüfen' },
+    hero: { guests: 'bis {n} Gäste', bedrooms: '{n} Schlafzimmer|{n} Schlafzimmer|{n} Schlafzimmer', bathrooms: '{n} Bäder|{n} Bad|{n} Bäder', check: 'Freie Termine prüfen', photos: 'Fotos ansehen' },
+    facts: { kapacita: 'Gäste', loznice: 'Schlafzimmer', koupelny: 'Bäder', luzka: 'Betten', plocha: 'm² Haus', pozemek: 'm² Grundstück', vyska: 'm ü. M.' },
+    rating: { title: 'So bewerten Gäste das Haus', checked: 'geprüft am {d}', reviews: '{n} Bewertungen' },
+    about: { eyebrow: 'Das Haus', whole: 'Das ganze Haus nur für Ihre Gruppe' },
+    gallery: { eyebrow: 'Galerie', title: 'Ein Blick hinein', all: 'Alle {n} Fotos zeigen' },
+    amen: { eyebrow: 'Ausstattung', title: 'Darauf können Sie sich freuen' },
+    loc: { eyebrow: 'Lage', title: 'Wo Sie uns finden', near: 'In der Nähe', km: 'km', map: 'Größere Karte öffnen', approx: 'Die Lage ist ungefähr.' },
+    book: {
+      eyebrow: 'Preise & Termine', title: 'Termin wählen und anfragen',
+      body: 'Die Preise gelten für das ganze Haus. Wählen Sie An- und Abreise im Kalender — der Preis wird sofort berechnet.',
+      bodyPerson: 'Wählen Sie An- und Abreise im Kalender — der Preis wird sofort berechnet.',
+      season: 'Saison', price: 'Preis', nightly: 'Pro Nacht', perPerson: 'pro Person und Nacht', perHouse: 'ganzes Haus', minStay: 'Mindestaufenthalt',
+      nights: '{n} Nächte|{n} Nacht|{n} Nächte', weekend: 'Wochenende (2 Nächte) {p}',
+      cleaning: 'Endreinigung', localFee: 'Kurtaxe', localFeeVal: '{p} / Erwachsener und Nacht',
+      pets: 'Haustier', petsVal: '{p} pro Aufenthalt', petsNight: '{p} pro Nacht', noPets: 'Keine Haustiere', bond: 'Kaution (erstattbar)', deposit: 'Anzahlung nach Bestätigung',
+      holiday: 'Weihnachten & Silvester', holidayVal: 'individueller Preis — Angebot anfragen',
+      indicative: 'Die Preise sind Richtwerte.',
+      free: 'Frei', booked: 'Belegt', chosen: 'Ihr Aufenthalt', checkoutOnly: 'nur Abreise',
+      prev: 'Vorherige Monate', next: 'Nächste Monate',
+      pickArrival: 'Wählen Sie den Anreisetag', pickDeparture: 'Jetzt den Abreisetag wählen',
+      demoAvail: 'Beispielbelegung. Auf der echten Website synchronisiert sich der Kalender selbst mit Airbnb, Booking.com und weiteren Portalen.',
+      summary: 'Ihre Anfrage', accommodation: 'Unterkunft', total: 'Gesamt', depositLine: 'Anzahlung {p} %',
+      minStayMsg: 'Mindestaufenthalt in diesem Zeitraum: {n}.', holidayMsg: 'Für diesen Termin gilt ein individueller Preis. Senden Sie eine Anfrage, der Eigentümer macht Ihnen ein Angebot.',
+      overMsg: 'Das Haus bietet Platz für höchstens {n} Gäste.', minPersons: 'mind. {n} Personen berechnet', blockedMsg: 'In diesem Zeitraum ist schon belegt — bitte andere Daten wählen.',
+      perNight: '{p} × {n}',
+      askMsg: 'Für diese Aufenthaltsdauer schickt Ihnen der Eigentümer den Preis auf Anfrage.', dayMsg: 'In diesem Zeitraum ist die Anreise {d}.', maxMsg: 'In diesem Zeitraum höchstens {n}.',
+      discount: 'Gratisnacht für jede Woche', extraTier: '{p} bis {n} Nächte, länger {q}', extras: 'Extras',
+      week: 'Woche', weeks: '{n} Wochen|1 Woche|{n} Wochen', weekendFri: 'Wochenende {od}–{do}', otherNight: 'andere Aufenthalte {p}/Nacht', minWeek: 'eine Woche oder ein Wochenende',
+      package: 'Paket', packageSub: 'Preis für den ganzen Aufenthalt', packageMsg: '{name} ({od}–{do}) vermieten wir als Paket für {p}. Wählen Sie genau diese Tage oder senden Sie eine Anfrage.',
+    },
+    form: {
+      adults: 'Erwachsene', children: 'Kinder', pets: 'Haustiere', name: 'Name', email: 'E-Mail', phone: 'Telefon', message: 'Nachricht',
+      phName: 'Ihr Name', phEmail: 'sie@email.de', phPhone: '+49… (optional)', phMessage: 'Was der Eigentümer wissen sollte (optional)',
+      consent: 'Mit dem Absenden bestätigen Sie die Aufenthaltsbedingungen und den Datenschutz.',
+      submit: 'Unverbindlich anfragen', note: 'Die Anfrage ist unverbindlich — Sie zahlen jetzt nichts. Der Eigentümer bestätigt den Termin persönlich.',
+      errDates: 'Bitte zuerst den Termin im Kalender wählen.', errName: 'Bitte Namen eingeben.', errEmail: 'Bitte E-Mail prüfen.',
+      okTitle: 'Das ist eine Demo', okBody: 'In der Demo wird nichts gesendet. Auf der echten Website bekäme der Eigentümer jetzt eine Nachricht aufs Handy und per E-Mail, und Sie eine Bestätigung mit Zusammenfassung.',
+      again: 'Zurück zum Formular',
+    },
+    info: {
+      eyebrow: 'Praktisches', title: 'Vor der Anreise', checkin: 'Anreise', checkout: 'Abreise', from: 'ab {p}', until: 'bis {p}',
+      pets: 'Haustiere', petsYes: 'Willkommen', petsNo: 'Nicht erlaubt', smoking: 'Rauchen', smokingNo: 'Innen verboten', smokingOut: 'Nur draußen',
+      parties: 'Feiern', partiesAsk: 'Nach Absprache', partiesNo: 'Nicht erlaubt', quiet: 'Nachtruhe', parking: 'Parken', payment: 'Zahlung',
+      paymentVal: '{p} % Anzahlung nach Bestätigung, Rest vor der Anreise. Überweisung mit QR-Code.',
+    },
+    foot: { contact: 'Kontakt', terms: 'Aufenthaltsbedingungen', privacy: 'Datenschutz', made: 'Website mit Direktbuchung', contactDemo: 'Kontakt des Eigentümers folgt nach Freigabe.' },
+    lb: { close: 'Schließen', prev: 'Vorheriges Foto', next: 'Nächstes Foto' },
+    months: ['Januar', 'Februar', 'März', 'April', 'Mai', 'Juni', 'Juli', 'August', 'September', 'Oktober', 'November', 'Dezember'],
+    dow: ['Mo', 'Di', 'Mi', 'Do', 'Fr', 'Sa', 'So'],
+    dowOn: ['am Montag', 'am Dienstag', 'am Mittwoch', 'am Donnerstag', 'am Freitag', 'am Samstag', 'am Sonntag'],
+  },
+
+  pl: {
+    nav: { about: 'O domu', photos: 'Zdjęcia', amenities: 'Wyposażenie', location: 'Okolica', prices: 'Ceny i terminy', book: 'Sprawdź termin' },
+    hero: { guests: 'do {n} gości', bedrooms: '{n} sypialni|{n} sypialnia|{n} sypialnie', bathrooms: '{n} łazienek|{n} łazienka|{n} łazienki', check: 'Sprawdź wolne terminy', photos: 'Zobacz zdjęcia' },
+    facts: { kapacita: 'Gości', loznice: 'Sypialni', koupelny: 'Łazienek', luzka: 'Łóżek', plocha: 'm² domu', pozemek: 'm² działki', vyska: 'm n.p.m.' },
+    rating: { title: 'Jak oceniają goście', checked: 'sprawdzono {d}', reviews: '{n} opinii' },
+    about: { eyebrow: 'O domu', whole: 'Cały dom tylko dla waszej grupy' },
+    gallery: { eyebrow: 'Galeria', title: 'Zajrzyjcie do środka', all: 'Pokaż wszystkie {n} zdjęcia' },
+    amen: { eyebrow: 'Wyposażenie', title: 'Na co możecie się cieszyć' },
+    loc: { eyebrow: 'Lokalizacja', title: 'Gdzie nas znaleźć', near: 'W okolicy', km: 'km', map: 'Otwórz większą mapę', approx: 'Lokalizacja jest przybliżona.' },
+    book: {
+      eyebrow: 'Ceny i terminy', title: 'Wybierzcie termin i wyślijcie zapytanie',
+      body: 'Ceny dotyczą całego domu. Wybierzcie w kalendarzu przyjazd i wyjazd — cenę obliczymy od razu.',
+      bodyPerson: 'Wybierzcie w kalendarzu przyjazd i wyjazd — cenę obliczymy od razu.',
+      season: 'Okres', price: 'Cena', nightly: 'Cena za noc', perPerson: 'za osobę i noc', perHouse: 'za cały dom', minStay: 'Min. pobyt',
+      nights: '{n} nocy|{n} noc|{n} noce', weekend: 'weekend (2 noce) {p}',
+      cleaning: 'Sprzątanie końcowe', localFee: 'Opłata miejscowa', localFeeVal: '{p} / dorosły i noc',
+      pets: 'Zwierzę', petsVal: '{p} za pobyt', petsNight: '{p} za noc', noPets: 'Bez zwierząt', bond: 'Kaucja zwrotna', deposit: 'Zaliczka po potwierdzeniu',
+      holiday: 'Boże Narodzenie i Sylwester', holidayVal: 'cena indywidualna — zapytajcie o ofertę',
+      indicative: 'Ceny są orientacyjne.',
+      free: 'Wolne', booked: 'Zajęte', chosen: 'Wasz pobyt', checkoutOnly: 'tylko wyjazd',
+      prev: 'Poprzednie miesiące', next: 'Następne miesiące',
+      pickArrival: 'Wybierzcie dzień przyjazdu', pickDeparture: 'Teraz wybierzcie dzień wyjazdu',
+      demoAvail: 'Przykładowe obłożenie. Na prawdziwej stronie kalendarz sam synchronizuje się z Airbnb, Booking.com i innymi portalami.',
+      summary: 'Wasze zapytanie', accommodation: 'Zakwaterowanie', total: 'Razem', depositLine: 'Zaliczka {p}%',
+      minStayMsg: 'Minimalny pobyt w tym okresie to {n}.', holidayMsg: 'Dla tego terminu obowiązuje cena indywidualna. Wyślijcie zapytanie, a właściciel przygotuje ofertę.',
+      overMsg: 'Dom mieści maksymalnie {n} gości.', minPersons: 'liczone min. {n} osób', blockedMsg: 'W tym zakresie są już zajęte noce — wybierzcie inny termin.',
+      perNight: '{p} × {n}',
+      askMsg: 'Na taki pobyt właściciel prześle cenę na zapytanie.', dayMsg: 'W tym okresie przyjazdy są {d}.', maxMsg: 'W tym okresie maksymalnie {n}.',
+      discount: 'Darmowa noc za każdy tydzień', extraTier: '{p} do {n} nocy, dłużej {q}', extras: 'Dodatki',
+      week: 'tydzień', weeks: '{n} tygodni|1 tydzień|{n} tygodnie', weekendFri: 'weekend {od}–{do}', otherNight: 'inne pobyty {p}/noc', minWeek: 'tydzień lub weekend',
+      package: 'Pakiet', packageSub: 'cena za cały pobyt', packageMsg: '{name} ({od}–{do}) wynajmujemy jako pakiet za {p}. Wybierzcie dokładnie te dni albo wyślijcie zapytanie.',
+    },
+    form: {
+      adults: 'Dorośli', children: 'Dzieci', pets: 'Zwierzęta', name: 'Imię', email: 'E-mail', phone: 'Telefon', message: 'Wiadomość',
+      phName: 'Wasze imię', phEmail: 'wy@email.pl', phPhone: '+48… (opcjonalnie)', phMessage: 'Co powinien wiedzieć właściciel (opcjonalnie)',
+      consent: 'Wysyłając akceptujecie warunki pobytu i zasady ochrony danych.',
+      submit: 'Wyślij niezobowiązujące zapytanie', note: 'Zapytanie jest niezobowiązujące — teraz nic nie płacicie. Właściciel potwierdzi termin osobiście.',
+      errDates: 'Najpierw wybierzcie termin w kalendarzu.', errName: 'Podajcie imię.', errEmail: 'Sprawdźcie e-mail.',
+      okTitle: 'To jest wersja demo', okBody: 'W wersji demo nic nie jest wysyłane. Na prawdziwej stronie właściciel dostałby teraz wiadomość na telefon i e-mailem, a wy potwierdzenie z podsumowaniem.',
+      again: 'Wróć do formularza',
+    },
+    info: {
+      eyebrow: 'Praktycznie', title: 'Zanim przyjedziecie', checkin: 'Przyjazd', checkout: 'Wyjazd', from: 'od {p}', until: 'do {p}',
+      pets: 'Zwierzęta', petsYes: 'Mile widziane', petsNo: 'Niedozwolone', smoking: 'Palenie', smokingNo: 'Zakaz w środku', smokingOut: 'Tylko na zewnątrz',
+      parties: 'Imprezy', partiesAsk: 'Po uzgodnieniu', partiesNo: 'Niedozwolone', quiet: 'Cisza nocna', parking: 'Parking', payment: 'Płatność',
+      paymentVal: 'Zaliczka {p}% po potwierdzeniu terminu, reszta przed przyjazdem. Przelew z kodem QR.',
+    },
+    foot: { contact: 'Kontakt', terms: 'Warunki pobytu', privacy: 'Ochrona danych', made: 'Strona z rezerwacją bezpośrednią', contactDemo: 'Kontakt właściciela dodamy po akceptacji.' },
+    lb: { close: 'Zamknij', prev: 'Poprzednie zdjęcie', next: 'Następne zdjęcie' },
+    months: ['styczeń', 'luty', 'marzec', 'kwiecień', 'maj', 'czerwiec', 'lipiec', 'sierpień', 'wrzesień', 'październik', 'listopad', 'grudzień'],
+    dow: ['Pn', 'Wt', 'Śr', 'Cz', 'Pt', 'So', 'Nd'],
+    dowOn: ['w poniedziałek', 'we wtorek', 'w środę', 'w czwartek', 'w piątek', 'w sobotę', 'w niedzielę'],
+  },
+};
+
+/* Vybavení: kód → štítek ve 4 jazycích. Ikony jsou v sablona.js (IKONY). */
+const VYBAVENI = {
+  sauna:      { cs: 'Sauna', en: 'Sauna', de: 'Sauna', pl: 'Sauna' },
+  virivka:    { cs: 'Vířivka', en: 'Hot tub', de: 'Whirlpool', pl: 'Jacuzzi' },
+  bazen:      { cs: 'Bazén', en: 'Swimming pool', de: 'Pool', pl: 'Basen' },
+  krb:        { cs: 'Krb', en: 'Fireplace', de: 'Kamin', pl: 'Kominek' },
+  gril:       { cs: 'Gril', en: 'Barbecue', de: 'Grill', pl: 'Grill' },
+  ohniste:    { cs: 'Ohniště', en: 'Fire pit', de: 'Feuerstelle', pl: 'Miejsce na ognisko' },
+  terasa:     { cs: 'Terasa', en: 'Terrace', de: 'Terrasse', pl: 'Taras' },
+  zahrada:    { cs: 'Zahrada', en: 'Garden', de: 'Garten', pl: 'Ogród' },
+  hriste:     { cs: 'Dětské hřiště', en: 'Playground', de: 'Spielplatz', pl: 'Plac zabaw' },
+  parkovani:  { cs: 'Parkování u domu', en: 'On-site parking', de: 'Parkplatz am Haus', pl: 'Parking przy domu' },
+  wifi:       { cs: 'Wi-Fi', en: 'Wi-Fi', de: 'WLAN', pl: 'Wi-Fi' },
+  kuchyn:     { cs: 'Plně vybavená kuchyň', en: 'Fully equipped kitchen', de: 'Voll ausgestattete Küche', pl: 'W pełni wyposażona kuchnia' },
+  mycka:      { cs: 'Myčka', en: 'Dishwasher', de: 'Geschirrspüler', pl: 'Zmywarka' },
+  pracka:     { cs: 'Pračka', en: 'Washing machine', de: 'Waschmaschine', pl: 'Pralka' },
+  lyzarna:    { cs: 'Lyžárna', en: 'Ski room', de: 'Skiraum', pl: 'Narciarnia' },
+  tv:         { cs: 'Televize', en: 'TV', de: 'Fernseher', pl: 'Telewizor' },
+  postylka:   { cs: 'Dětská postýlka', en: 'Baby cot', de: 'Kinderbett', pl: 'Łóżeczko dziecięce' },
+  pingpong:   { cs: 'Stolní tenis', en: 'Table tennis', de: 'Tischtennis', pl: 'Tenis stołowy' },
+  kulecnik:   { cs: 'Kulečník', en: 'Pool table', de: 'Billard', pl: 'Bilard' },
+  herna:      { cs: 'Herna', en: 'Games room', de: 'Spielzimmer', pl: 'Pokój gier' },
+  fitness:    { cs: 'Posilovna', en: 'Gym', de: 'Fitnessraum', pl: 'Siłownia' },
+  jidelna:    { cs: 'Jídelna pro celou skupinu', en: 'Dining for the whole group', de: 'Essbereich für die ganze Gruppe', pl: 'Jadalnia dla całej grupy' },
+  pergola:    { cs: 'Kryté posezení', en: 'Covered seating', de: 'Überdachte Sitzecke', pl: 'Zadaszone miejsce do siedzenia' },
+  psi:        { cs: 'Psi vítáni', en: 'Dogs welcome', de: 'Hunde willkommen', pl: 'Psy mile widziane' },
+  nabijecka:  { cs: 'Nabíječka pro elektromobil', en: 'EV charger', de: 'E-Auto-Ladestation', pl: 'Ładowarka do aut elektrycznych' },
+  vyhled:     { cs: 'Výhled na hory', en: 'Mountain views', de: 'Bergblick', pl: 'Widok na góry' },
+  kolo:       { cs: 'Úschovna kol', en: 'Bike storage', de: 'Fahrradraum', pl: 'Przechowalnia rowerów' },
+  klima:      { cs: 'Klimatizace', en: 'Air conditioning', de: 'Klimaanlage', pl: 'Klimatyzacja' },
+  projektor:  { cs: 'Projektor / kino', en: 'Projector / cinema', de: 'Beamer / Heimkino', pl: 'Projektor / kino' },
+  bezbarier:  { cs: 'Bezbariérový přístup', en: 'Step-free access', de: 'Barrierefreier Zugang', pl: 'Dostęp bez barier' },
+  rybnik:     { cs: 'Rybník / koupání', en: 'Pond / swimming', de: 'Teich / Baden', pl: 'Staw / kąpiel' },
+};
+
+/* Popisky kategorií fotek (pro alt texty a lightbox). */
+const FOTO_KAT = {
+  exterier: { cs: 'Dům zvenku', en: 'Exterior', de: 'Außenansicht', pl: 'Dom z zewnątrz' },
+  zima:     { cs: 'Dům v zimě', en: 'In winter', de: 'Im Winter', pl: 'Zimą' },
+  obyvak:   { cs: 'Obývací pokoj', en: 'Living room', de: 'Wohnzimmer', pl: 'Salon' },
+  kuchyn:   { cs: 'Kuchyň', en: 'Kitchen', de: 'Küche', pl: 'Kuchnia' },
+  jidelna:  { cs: 'Jídelna', en: 'Dining area', de: 'Essbereich', pl: 'Jadalnia' },
+  loznice:  { cs: 'Ložnice', en: 'Bedroom', de: 'Schlafzimmer', pl: 'Sypialnia' },
+  koupelna: { cs: 'Koupelna', en: 'Bathroom', de: 'Badezimmer', pl: 'Łazienka' },
+  wellness: { cs: 'Wellness', en: 'Wellness', de: 'Wellness', pl: 'Wellness' },
+  sauna:    { cs: 'Sauna', en: 'Sauna', de: 'Sauna', pl: 'Sauna' },
+  bazen:    { cs: 'Bazén', en: 'Pool', de: 'Pool', pl: 'Basen' },
+  zahrada:  { cs: 'Zahrada', en: 'Garden', de: 'Garten', pl: 'Ogród' },
+  terasa:   { cs: 'Terasa', en: 'Terrace', de: 'Terrasse', pl: 'Taras' },
+  herna:    { cs: 'Herna', en: 'Games room', de: 'Spielzimmer', pl: 'Pokój gier' },
+  okoli:    { cs: 'Okolí', en: 'Surroundings', de: 'Umgebung', pl: 'Okolica' },
+  vyhled:   { cs: 'Výhled', en: 'View', de: 'Aussicht', pl: 'Widok' },
+  interier: { cs: 'Interiér', en: 'Interior', de: 'Innenraum', pl: 'Wnętrze' },
+};
+
+/* Druhy cílů v okolí — štítek před vlastním jménem cíle. */
+const OKOLI_TYP = {
+  ski:      { cs: 'Sjezdovky', en: 'Ski slopes', de: 'Skipisten', pl: 'Stoki narciarskie' },
+  bezky:    { cs: 'Běžkařské trasy', en: 'Cross-country trails', de: 'Langlaufloipen', pl: 'Trasy biegowe' },
+  jezero:   { cs: 'Koupání', en: 'Swimming', de: 'Baden', pl: 'Kąpielisko' },
+  centrum:  { cs: 'Centrum', en: 'Town centre', de: 'Ortszentrum', pl: 'Centrum' },
+  obchod:   { cs: 'Obchod', en: 'Grocery', de: 'Einkaufen', pl: 'Sklep' },
+  restaurace: { cs: 'Restaurace', en: 'Restaurant', de: 'Restaurant', pl: 'Restauracja' },
+  vylet:    { cs: 'Výlet', en: 'Trip', de: 'Ausflug', pl: 'Wycieczka' },
+  hrad:     { cs: 'Hrad / zámek', en: 'Castle', de: 'Burg / Schloss', pl: 'Zamek' },
+  aquapark: { cs: 'Aquapark', en: 'Water park', de: 'Erlebnisbad', pl: 'Aquapark' },
+  kolo:     { cs: 'Cyklotrasy', en: 'Bike trails', de: 'Radwege', pl: 'Trasy rowerowe' },
+  vlak:     { cs: 'Nádraží', en: 'Train station', de: 'Bahnhof', pl: 'Dworzec' },
+  bus:      { cs: 'Autobus', en: 'Bus stop', de: 'Bushaltestelle', pl: 'Przystanek' },
+  les:      { cs: 'Les', en: 'Forest', de: 'Wald', pl: 'Las' },
+  letiste:  { cs: 'Letiště', en: 'Airport', de: 'Flughafen', pl: 'Lotnisko' },
+  mesto:    { cs: 'Město', en: 'Town', de: 'Stadt', pl: 'Miasto' },
+};
+
+/* Názvy sezón (když je objekt.json nepojmenuje sám). */
+const SEZONY = {
+  zima:   { cs: 'Zimní sezóna', en: 'Winter season', de: 'Wintersaison', pl: 'Sezon zimowy' },
+  leto:   { cs: 'Letní sezóna', en: 'Summer season', de: 'Sommersaison', pl: 'Sezon letni' },
+  hlavni: { cs: 'Hlavní sezóna', en: 'Peak season', de: 'Hauptsaison', pl: 'Sezon wysoki' },
+  mimo:   { cs: 'Mimo sezónu', en: 'Off-season', de: 'Nebensaison', pl: 'Poza sezonem' },
+  jaro:   { cs: 'Jaro a podzim', en: 'Spring & autumn', de: 'Frühling & Herbst', pl: 'Wiosna i jesień' },
+};
+
+window.OBJEKT = {"id":"chata-bela","nazev":"Chata Bělá","typ":{"cs":"Celá chata pro rodiny","en":"Whole chalet for families","de":"Ganze Hütte für Familien","pl":"Cała chata dla rodzin"},"obec":"Bělá u Pecky","region":{"cs":"Podkrkonoší","en":"Krkonoše foothills","de":"Riesengebirgsvorland","pl":"Podgórze Karkonoskie"},"gps":{"lat":50.47686,"lon":15.5789,"priblizne":true},"akcent":"#9A5B3C","motiv":"den","fakta":{"kapacita":12,"loznice":3,"koupelny":2,"luzka":12},"hero":{"foto":0,"chips":["kuchyn","ohniste"]},"claim":{"cs":"Celá chata pro 12 hostů v Bělé u Pecky. Hrad Pecka 2 km, skiareál v Nové Pace 5 km.","en":"A whole chalet for 12 guests in Bělá u Pecky. Pecka Castle 2 km away, the Nová Paka ski area 5 km.","de":"Eine ganze Hütte für 12 Gäste in Bělá u Pecky. Burg Pecka 2 km, das Skigebiet in Nová Paka 5 km entfernt.","pl":"Cała chata dla 12 gości w Bělé u Pecky. Zamek Pecka 2 km, ośrodek narciarski w Nowej Pace 5 km."},"nadpis":{"cs":"Chata pro rodiny na kraji Krkonoš","en":"A family chalet at the edge of the Krkonoše","de":"Familienhütte am Rand des Riesengebirges","pl":"Chata dla rodzin na skraju Karkonoszy"},"popis":{"cs":"Dřevěná chata v obci Bělá u Pecky, mezi Novou Pakou a Jičínem. Pronajímá se celá jedné skupině. V přízemí je jeden pokoj s manželskou a patrovou postelí, kuchyň, obývací pokoj s jídelnou a televizí, koupelna s vanou a sprchou a samostatné WC. V patře jsou dva pokoje pro čtyři osoby, odpočívadlo s posezením a šipkami, koupelna se sprchou a další WC.\n\nKuchyň má myčku, plynový sporák, mikrovlnku, kávovar a domácí pekárnu. K chatě patří veranda, venkovní terasa a ohniště. Pro nejmenší je dětská stolička a houpátko pro kojence. Hrad Pecka je 2 km daleko, v Nové Pace je skiareál, bruslařský stadion, bowling a krytý bazén s vířivkou a saunou.","en":"A timber chalet in the village of Bělá u Pecky, between Nová Paka and Jičín. It is rented whole to one group. The ground floor has one room with a double bed and a bunk bed, a kitchen, a living room with a dining area and a TV, a bathroom with a bathtub and a shower, and a separate toilet. Upstairs there are two rooms for four people, a landing with seating and a dartboard, a bathroom with a shower and another toilet.\n\nThe kitchen has a dishwasher, a gas cooker, a microwave, a coffee maker and a home bread maker. The chalet comes with a veranda, an outdoor terrace and a fire pit. For the little ones there is a high chair and a baby bouncer. Pecka Castle is 2 km away, and Nová Paka has a ski area, a skating stadium, a bowling alley and an indoor pool with a hot tub and a sauna.","de":"Eine Holzhütte im Dorf Bělá u Pecky, zwischen Nová Paka und Jičín. Vermietet wird sie als Ganzes an eine Gruppe. Im Erdgeschoss liegen ein Zimmer mit Doppelbett und Etagenbett, die Küche, ein Wohnzimmer mit Essbereich und Fernseher, ein Bad mit Wanne und Dusche und ein separates WC. Im Obergeschoss gibt es zwei Zimmer für je vier Personen, einen Treppenabsatz mit Sitzecke und Dartscheibe, ein Bad mit Dusche und ein weiteres WC.\n\nDie Küche hat einen Geschirrspüler, einen Gasherd, eine Mikrowelle, eine Kaffeemaschine und einen Brotbackautomaten. Zur Hütte gehören eine Veranda, eine Terrasse und eine Feuerstelle. Für die Kleinsten gibt es einen Hochstuhl und eine Babywippe. Die Burg Pecka ist 2 km entfernt, in Nová Paka gibt es ein Skigebiet, ein Eisstadion, eine Kegelbahn und ein Hallenbad mit Whirlpool und Sauna.","pl":"Drewniana chata we wsi Bělá u Pecky, między Nową Pakou a Jiczynem. Wynajmowana jest w całości jednej grupie. Na parterze jest pokój z łóżkiem małżeńskim i łóżkiem piętrowym, kuchnia, salon z jadalnią i telewizorem, łazienka z wanną i prysznicem oraz osobna toaleta. Na piętrze są dwa pokoje po cztery osoby, antresola z miejscem do siedzenia i tarczą do rzutków, łazienka z prysznicem i druga toaleta.\n\nKuchnia ma zmywarkę, kuchenkę gazową, mikrofalówkę, ekspres do kawy i domowy wypiekacz do chleba. Do chaty należą weranda, taras i miejsce na ognisko. Dla najmłodszych jest krzesełko do karmienia i bujaczek dla niemowląt. Zamek Pecka jest 2 km stąd, a w Nowej Pace są ośrodek narciarski, lodowisko, kręgielnia i kryty basen z jacuzzi i saunę."},"zvyrazneni":[{"cs":"Tři pokoje pro 12 hostů, dvě koupelny","en":"Three bedrooms for 12 guests, two bathrooms","de":"Drei Zimmer für 12 Gäste, zwei Bäder","pl":"Trzy pokoje dla 12 gości, dwie łazienki"},{"cs":"Kuchyň s myčkou a domácí pekárnou","en":"Kitchen with a dishwasher and a bread maker","de":"Küche mit Geschirrspüler und Brotbackautomat","pl":"Kuchnia ze zmywarką i wypiekaczem do chleba"},{"cs":"Hrad Pecka 2 km, skiareál v Nové Pace 5 km","en":"Pecka Castle 2 km, Nová Paka ski area 5 km","de":"Burg Pecka 2 km, Skigebiet Nová Paka 5 km","pl":"Zamek Pecka 2 km, ośrodek narciarski w Nowej Pace 5 km"}],"fotky":[{"url":"https://chatabela.cz/static/img/slide/02.jpg","kat":"exterier"},{"url":"https://chatabela.cz/static/img/slide/08.jpg","kat":"obyvak"},{"url":"https://chatabela.cz/static/img/slide/05.jpg","kat":"kuchyn"},{"url":"https://chatabela.cz/static/img/slide/23.jpg","kat":"loznice"},{"url":"https://chatabela.cz/static/img/slide/28.jpg","kat":"koupelna"}],"vybaveni":["kuchyn","mycka","jidelna","tv","terasa","ohniste","gril",{"cs":"Domácí pekárna","en":"Home bread maker","de":"Brotbackautomat","pl":"Domowy wypiekacz do chleba","ikona":"ok"},{"cs":"Šipky a stolní hry","en":"Darts and board games","de":"Darts und Brettspiele","pl":"Rzutki i gry planszowe","ikona":"herna"},{"cs":"Dětská stolička a houpátko pro kojence","en":"High chair and baby bouncer","de":"Hochstuhl und Babywippe","pl":"Krzesełko i bujaczek dla niemowląt","ikona":"postylka"}],"okoli":[{"typ":"hrad","nazev":{"cs":"Hrad Pecka","en":"Pecka Castle","de":"Burg Pecka","pl":"Zamek Pecka"},"km":2},{"typ":"jezero","nazev":{"cs":"Koupaliště Pecka","en":"Pecka outdoor pool","de":"Freibad Pecka","pl":"Kąpielisko Pecka"},"km":2},{"typ":"ski","nazev":{"cs":"Skiareál Máchovka, Nová Paka","en":"Máchovka ski area, Nová Paka","de":"Skigebiet Máchovka, Nová Paka","pl":"Ośrodek Máchovka, Nowa Paka"},"km":5},{"typ":"ski","nazev":{"cs":"Malý vlek na Pecce","en":"Small ski lift at Pecka","de":"Kleiner Skilift bei Pecka","pl":"Mały wyciąg przy Pecce"},"km":2},{"typ":"mesto","nazev":"Nová Paka","km":5},{"typ":"mesto","nazev":"Lázně Bělohrad","km":6},{"typ":"vylet","nazev":{"cs":"Miletín, rodný dům K. J. Erbena","en":"Miletín, birthplace of K. J. Erben","de":"Miletín, Geburtshaus von K. J. Erben","pl":"Miletín, dom rodzinny K. J. Erbena"},"km":14},{"typ":"mesto","nazev":{"cs":"Jičín, město pohádek","en":"Jičín, the fairy-tale town","de":"Jičín, die Märchenstadt","pl":"Jiczyn, miasto bajek"},"km":21},{"typ":"vylet","nazev":{"cs":"Prachovské skály","en":"Prachov Rocks","de":"Prachover Felsen","pl":"Skały Prachowskie"},"km":27},{"typ":"vylet","nazev":{"cs":"ZOO Dvůr Králové","en":"Dvůr Králové Zoo","de":"Zoo Dvůr Králové","pl":"ZOO Dvůr Králové"},"km":27}],"lokalitaText":{"cs":"Obec Bělá u Pecky leží v Podkrkonoší, nedaleko Nové Paky a Jičína. V okolí jsou cyklostezky, houbařské lesy a koupaliště. Do Českého ráje je to asi 45 km.","en":"The village of Bělá u Pecky lies in the Krkonoše foothills, near Nová Paka and Jičín. The area has cycle routes, mushroom-picking forests and outdoor pools. The Bohemian Paradise is about 45 km away.","de":"Das Dorf Bělá u Pecky liegt im Riesengebirgsvorland, nahe Nová Paka und Jičín. In der Umgebung gibt es Radwege, Pilzwälder und Freibäder. Ins Böhmische Paradies sind es etwa 45 km.","pl":"Wieś Bělá u Pecky leży na Podgórzu Karkonoskim, niedaleko Nowej Paki i Jiczyna. W okolicy są szlaki rowerowe, lasy grzybowe i kąpieliska. Do Czeskiego Raju jest około 45 km."},"cenik":{"model":"objekt","sezony":[{"kod":"mimo","tyden":17000,"minNoci":7,"ostatniNaPoptavku":true}],"svatky":[{"od":"12-20","do":"12-27","cena":20000,"nazev":{"cs":"Vánoce","en":"Christmas","de":"Weihnachten","pl":"Boże Narodzenie"}},{"od":"12-27","do":"01-03","cena":25000,"nazev":{"cs":"Silvestr","en":"New Year's Eve","de":"Silvester","pl":"Sylwester"}}],"uklid":null,"poplatekZPobytu":null,"pes":null,"kauce":3000,"zalohaPct":null,"maxHostu":12,"orientacni":true,"poznamka":{"cs":"Cena je za celou chatu a týden. Energie (voda, elektřina) se platí navíc. Vratná záloha na energie a případné škody je 3 000 Kč. Kratší pobyty po domluvě. V objektu platí přísný zákaz kouření, pokuta 10 000 Kč.","en":"The price is for the whole chalet and one week. Utilities (water, electricity) are charged extra. The refundable deposit for utilities and any damage is CZK 3,000. Shorter stays by arrangement. Smoking is strictly forbidden in the building, the fine is CZK 10,000.","de":"Der Preis gilt für die ganze Hütte und eine Woche. Nebenkosten (Wasser, Strom) werden zusätzlich berechnet. Die rückzahlbare Kaution für Nebenkosten und eventuelle Schäden beträgt 3 000 CZK. Kürzere Aufenthalte nach Absprache. Im Haus gilt ein striktes Rauchverbot, die Strafe beträgt 10 000 CZK.","pl":"Cena dotyczy całej chaty i tygodnia. Media (woda, prąd) płatne dodatkowo. Zwrotna kaucja na media i ewentualne szkody wynosi 3 000 CZK. Krótsze pobyty po uzgodnieniu. W obiekcie obowiązuje ścisły zakaz palenia, kara 10 000 CZK."}},"hodnoceni":[{"platforma":"e-chalupy.cz","skore":5,"z":5,"pocet":1}],"hodnoceniOvereno":"2026-11-08","dostupnost":{"typ":"demo"},"demo":{"zapnuto":true,"datum":"2026-11-17","fotkyMax":5,"lista":"Neoficiální návrh z údajů na vašem webu","fotkyZdroj":"váš web chatabela.cz, jen odkazem, nic jsem nestahoval","zdroj":"Údaje jsem převzal z vašeho webu chatabela.cz (stav 17. 11. 2026), hodnocení z e-chalup. Data Vánoc a Silvestra web neuvádí, proto jsem je odhadl. Obsazenost je ukázková.","proMajitele":"Dnes host na vašem webu volá nebo píše e-mail a čeká na potvrzení až tři dny. Tady si vybere termín, hned vidí cenu podle vašeho ceníku a poptávka vám přijde do mobilu."}};
+window.NABIDKA = {"znacka":"","kontakt":{"email":"pavel.kubiznak@gmail.com","telefon":"775 220 785"},"zaklad":{"nazev":"Vlastní web s přímými rezervacemi","cena":9900,"cenaPopis":"jednou, a až když se vám web líbí","provoz":"Týden si web prohlížejte zdarma. Když se nelíbí, smažu ho a nic neplatíte. První rok provozu je v ceně, pak 990 Kč za rok i s adresou webu. Skončit můžete kdykoli a web si odnést.","obsah":["Web ve 4 jazycích (čeština, němčina, polština, angličtina) z vašich fotek a textů","Adresu webu (doménu) koupím a zapíšu na vaše jméno. Nic nezakládáte ani nenastavujete. Když už adresu máte, použiju ji.","Kalendář obsazenosti napojený na Airbnb, Booking, e-chalupy a další portály — oběma směry, takže termín nikdo neprodá dvakrát","Poptávkový formulář s okamžitým výpočtem ceny podle vašeho ceníku (sezóny, minimální pobyt, úklid, poplatek z pobytu, mazlíčci)","Okamžité upozornění na každou poptávku do mobilu i e-mailem — žádná poptávka neleží","Administrace: ceník, blokace termínů, poptávky a předrezervace se zálohou a QR platbou","Spuštění do 7 dní od vašeho ano, zaškolení po telefonu, rok podpory","Web i všechna hesla vám předám do 7 dnů, kdykoli řeknete"]},"moduly":[],"poznamka":"Cena je jednorázová. Z vašich rezervací si neberu žádnou provizi.","provize":{"airbnb":15.5,"booking":15,"bookingPlatby":1.3,"vychozi":16},"provizeZdroj":"Provize jsou orientační (stav 10/2026): Airbnb účtuje většině hostitelů 15,5 % a do konce roku 2026 na tento model přechází všichni; Booking.com v ČR obvykle kolem 15 % plus 1–1,5 % za platby, Genius slevy zvlášť. Neplátce DPH odvádí z provize zahraničních portálů ještě 21 % DPH — skutečný náklad je pak 18–19 %. Přesné číslo najdete ve vyúčtování z portálu.","reference":{"text":"Postaveno na systému, který provozuju ve vlastní vile v Krkonoších:","url":"https://villarudolf.com"},"jakToFunguje":[["Ukázka","Tuhle stránku jsem připravil z veřejných údajů o vaší chalupě. Nic za ni neplatíte a vyhledávače ji nevidí. Týden si ji prohlížejte. Když o ni nestojíte, smažu ji."],["Vaše ano","Pošlu fakturu. Adresu webu (doménu) koupím a zapíšu na vaše jméno, nebo použiju tu, kterou už máte. Nic nezakládáte ani nenastavujete."],["Doladění","Pošlete fotky v plném rozlišení, ceník a texty, nebo je převezmu z vašeho webu. Do 7 dní web běží na vaší adrese."],["Napojení kalendářů","Z Airbnb, Bookingu a e-chalup vložím odkazy na kalendář (iCal). Obsazenost se pak hlídá sama a přímé rezervace se propisují zpátky na portály."],["Poptávka","Host si vybere termín, hned vidí cenu a pošle poptávku. Vy dostanete okamžité upozornění do mobilu."],["Předrezervace a záloha","Potvrdíte termín, host dostane zálohovou fakturu s QR platbou a termín je blokovaný do splatnosti. Nezaplacená předrezervace se sama uvolní."],["Kdykoli potom","Doména je od prvního dne psaná na vás. Web i všechna hesla vám předám do 7 dnů, kdykoli řeknete."]]};
+</script>
+<script>
+/* Šablona webu vily — chování. Vanilla JS, bez frameworku.
+   Vstup: window.OBJEKT (dema/<id>/objekt.json) a window.NABIDKA (nabidka.json),
+   obojí vloží generator/vygeneruj.mjs. Všechno konkrétní o domě je v OBJEKT,
+   tady jen logika: jazyk, galerie, kalendář, výpočet ceny, poptávka, panel pro majitele.
+
+   Výpočet ceny vychází z computeQuote() z villarudolf.com (sezóny MM-DD, víkendová
+   sazba za 2 noci, úklid, poplatek z pobytu jen za dospělé, mazlíček za pobyt)
+   a navíc umí model „za osobu a noc" s minimálním počtem účtovaných osob. */
+'use strict';
+
+(function () {
+  const O = window.OBJEKT;
+  const N = window.NABIDKA || null;
+  const DEMO = !!(O.demo && O.demo.zapnuto);
+  const JAZYKY = ['cs', 'en', 'de', 'pl'];
+
+  /* ---------------- drobnosti ---------------- */
+  const $ = (s, r) => (r || document).querySelector(s);
+  const esc = (s) => String(s == null ? '' : s).replace(/[&<>"']/g, (c) => ({ '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;', "'": '&#39;' }[c]));
+  function el(tag, attrs, kids) {
+    const n = document.createElement(tag);
+    if (attrs) for (const k in attrs) {
+      const v = attrs[k];
+      if (v == null || v === false) continue;
+      if (k === 'html') n.innerHTML = v;
+      else if (k === 'text') n.textContent = v;
+      else if (k.slice(0, 2) === 'on') n.addEventListener(k.slice(2), v);
+      else n.setAttribute(k, v === true ? '' : v);
+    }
+    (kids || []).forEach((c) => c != null && n.appendChild(typeof c === 'string' ? document.createTextNode(c) : c));
+    return n;
+  }
+  function ls(k, v) { try { if (v === undefined) return localStorage.getItem(k); localStorage.setItem(k, v); } catch (e) { return null; } }
+
+  const state = { lang: 'cs', s0: 0, s1: 0, calOff: 0, lb: -1, quote: null };
+
+  function T() { return TEXTY[state.lang] || TEXTY.cs; }
+  function t(path, vars) {
+    let v = path.split('.').reduce((o, k) => (o == null ? undefined : o[k]), T());
+    if (v == null) v = path.split('.').reduce((o, k) => (o == null ? undefined : o[k]), TEXTY.cs);
+    if (v == null) return path;
+    return fill(String(v), vars);
+  }
+  function fill(s, vars) { return vars ? s.replace(/\{(\w+)\}/g, (m, k) => (vars[k] != null ? vars[k] : m)) : s; }
+  /* Lokalizovaný text z objekt.json: {cs,en,de,pl} nebo prostý řetězec. */
+  function L(v) { if (v == null) return ''; if (typeof v === 'string') return v; return v[state.lang] || v.cs || v.en || ''; }
+  /* Plurál: 'nula/0|jedna|2–4' podle jazyka (cs/pl mají 3 tvary). */
+  function plural(path, n) {
+    const forms = t(path, { n: fmtNum(n) }).split('|');
+    if (forms.length === 1) return forms[0];
+    if (state.lang === 'en' || state.lang === 'de') return n === 1 ? forms[1] : forms[0];
+    if (n === 1) return forms[1];
+    if (state.lang === 'pl') { const d = n % 10, h = n % 100; return d >= 2 && d <= 4 && (h < 12 || h > 14) ? forms[2] : forms[0]; }
+    return n >= 2 && n <= 4 ? forms[2] : forms[0];
+  }
+  const SEP = { cs: ' ', en: ',', de: '.', pl: ' ' };
+  function fmtNum(n) { return String(Math.round(n)).replace(/\B(?=(\d{3})+(?!\d))/g, SEP[state.lang] || ' '); }
+  function money(n) { return fmtNum(n) + ' Kč'; }
+  /* Vzdálenost: pod 10 km s jedním desetinným místem (1,5 km), jinak celé číslo. */
+  function fmtKm(km) {
+    if (km < 10 && Math.round(km) !== km) return String(Math.round(km * 10) / 10).replace('.', state.lang === 'en' ? '.' : ',');
+    return fmtNum(km);
+  }
+  function fx(czk) {
+    const r = (O.cenik && O.cenik.kurzy) || { EUR: 24.5, PLN: 5.8 };
+    if (state.lang === 'en' || state.lang === 'de') return '≈ ' + fmtNum(Math.round(czk / r.EUR / 5) * 5) + ' €';
+    if (state.lang === 'pl') return '≈ ' + fmtNum(Math.round(czk / r.PLN / 10) * 10) + ' zł';
+    return null;
+  }
+  function fmtDate(iso) {
+    const d = new Date(iso + 'T12:00:00');
+    return d.toLocaleDateString({ cs: 'cs-CZ', en: 'en-GB', de: 'de-DE', pl: 'pl-PL' }[state.lang], { day: 'numeric', month: 'long', year: 'numeric' });
+  }
+
+  /* ---------------- ikony (čárové, 24×24) ---------------- */
+  const P = (d) => '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">' + d + '</svg>';
+  const IKONY = {
+    hoste: P('<circle cx="9" cy="8" r="3.2"/><path d="M3 19c.6-3.3 3-5 6-5s5.4 1.7 6 5"/><circle cx="17" cy="9" r="2.4"/><path d="M15.5 14.2c2.6-.3 4.8 1.2 5.5 4.3"/>'),
+    loznice: P('<path d="M3 18V7M21 18v-5a3 3 0 0 0-3-3H10v8"/><path d="M3 14h18"/><circle cx="6.5" cy="11" r="1.6"/>'),
+    koupelny: P('<path d="M4 12h16v2a5 5 0 0 1-5 5H9a5 5 0 0 1-5-5z"/><path d="M6 12V6a2 2 0 0 1 3.6-1.2"/><path d="M7 19l-1 2M17 19l1 2"/>'),
+    sauna: P('<path d="M7 20c-1.5-2 1.5-3 0-5s1.5-3 0-5M12 20c-1.5-2 1.5-3 0-5s1.5-3 0-5M17 20c-1.5-2 1.5-3 0-5s1.5-3 0-5"/><path d="M4 4h16"/>'),
+    virivka: P('<path d="M3 13h18v2a4 4 0 0 1-4 4H7a4 4 0 0 1-4-4z"/><path d="M8 9c0-1 1-1 1-2s-1-1-1-2M12 9c0-1 1-1 1-2s-1-1-1-2M16 9c0-1 1-1 1-2s-1-1-1-2"/>'),
+    bazen: P('<path d="M2 17c2 0 2-1.2 4-1.2S8 17 10 17s2-1.2 4-1.2 2 1.2 4 1.2 2-1.2 4-1.2"/><path d="M2 20.5c2 0 2-1.2 4-1.2s2 1.2 4 1.2 2-1.2 4-1.2 2 1.2 4 1.2 2-1.2 4-1.2"/><path d="M8 14V5a2 2 0 0 1 4 0M16 14V5a2 2 0 0 0-4 0M8 9h8"/>'),
+    krb: P('<path d="M3 21h18M5 21V8h14v13M3 8h18V4H3z"/><path d="M12 19c-2 0-3-1.3-3-2.8 0-2 3-3.2 3-5.2 1.5 1.5 3 3 3 5.2 0 1.5-1 2.8-3 2.8z"/>'),
+    gril: P('<path d="M4 9h16a8 8 0 0 1-16 0z"/><path d="M8 17l-2 4M16 17l2 4M12 17v4M9 6c0-1 1-1 1-2M14 6c0-1 1-1 1-2"/>'),
+    ohniste: P('<path d="M12 18c-3 0-4.5-2-4.5-4 0-3 4.5-4.5 4.5-8 2.3 2.3 4.5 4.5 4.5 8 0 2-1.5 4-4.5 4z"/><path d="M4 21l16-3M4 18l16 3"/>'),
+    terasa: P('<path d="M3 10h18M5 10v10M19 10v10M3 14h18M12 3 3 8h18z"/>'),
+    zahrada: P('<path d="M12 21v-7"/><path d="M12 14c-4 0-6-2.5-6-6 3 0 6 2 6 6zM12 12c0-3.5 2.2-6 6-6 0 3.5-2.5 6-6 6z"/><path d="M4 21h16"/>'),
+    hriste: P('<path d="M4 21V7l4-4 4 4v14M12 10h7l-3 11"/><path d="M8 11v3"/>'),
+    parkovani: P('<rect x="3" y="3" width="18" height="18" rx="4"/><path d="M9.5 17V7h3.8a3 3 0 0 1 0 6H9.5"/>'),
+    wifi: P('<path d="M2.5 9a14 14 0 0 1 19 0M5.5 12.5a9.5 9.5 0 0 1 13 0M8.6 16a5 5 0 0 1 6.8 0"/><circle cx="12" cy="19" r="1"/>'),
+    kuchyn: P('<path d="M6 3v8a2 2 0 0 0 2 2v8M6 3v5M10 3v5a2 2 0 0 1-2 2M17 21V3c-2 1.5-3 4-3 7v4h3"/>'),
+    mycka: P('<rect x="4" y="3" width="16" height="18" rx="2"/><path d="M4 8h16M7.5 5.5h.01M10.5 5.5h.01"/><circle cx="12" cy="14" r="3.5"/>'),
+    pracka: P('<rect x="4" y="3" width="16" height="18" rx="2"/><path d="M4 7h16"/><circle cx="12" cy="14" r="4"/><path d="M9.5 14.5c1.2-.8 2.5.8 5 0"/>'),
+    lyzarna: P('<path d="M4 21 20 3M8 21 21 8"/><path d="M3 17l3 1M7 21l1-3"/>'),
+    tv: P('<rect x="3" y="5" width="18" height="12" rx="2"/><path d="M8 21h8M12 17v4"/>'),
+    postylka: P('<path d="M4 20V8M20 20V8M4 12h16M4 17h16M8 12v5M12 12v5M16 12v5"/>'),
+    pingpong: P('<circle cx="9" cy="9" r="5.5"/><path d="M13 13l6.5 6.5"/><circle cx="18.5" cy="5.5" r="1.5"/>'),
+    kulecnik: P('<circle cx="12" cy="12" r="8.5"/><circle cx="12" cy="12" r="3.5"/><path d="M11 12h2"/>'),
+    herna: P('<rect x="3" y="7" width="18" height="11" rx="4"/><path d="M8 10.5v4M6 12.5h4M15.5 11.5h.01M17.5 13.5h.01"/>'),
+    fitness: P('<path d="M6.5 6.5v11M17.5 6.5v11M3 9.5v5M21 9.5v5M6.5 12h11"/>'),
+    jidelna: P('<path d="M3 10h18M5 10l-1 10M19 10l1 10M8 10V7M16 10V7M8 7h8"/>'),
+    pergola: P('<path d="M3 8h18M5 8v13M19 8v13M3 4h18v4M9 21v-6h6v6"/>'),
+    psi: P('<path d="M10 5.5 8 3 5 5l.5 4.5C5.5 13 8 14 8 17v3h8v-3c0-3 2.5-4 2.5-7.5L19 5l-3-2-2 2.5z"/><path d="M10 10h.01M14 10h.01M11 13h2"/>'),
+    nabijecka: P('<rect x="4" y="3" width="11" height="18" rx="2"/><path d="M15 9h2a2 2 0 0 1 2 2v5a1.5 1.5 0 0 0 3 0V8l-2-2M10 7l-2 4h3l-2 4"/>'),
+    vyhled: P('<path d="M2 20 9 8l4 6 3-4 6 10z"/><circle cx="17" cy="5" r="2"/>'),
+    kolo: P('<circle cx="6" cy="16" r="3.5"/><circle cx="18" cy="16" r="3.5"/><path d="M6 16l4-8h5M9 8h3M12 16l3-8 3 8"/>'),
+    klima: P('<path d="M12 2v20M4 6l16 12M20 6 4 18"/>'),
+    projektor: P('<rect x="2" y="8" width="20" height="9" rx="2"/><circle cx="16" cy="12.5" r="2.5"/><path d="M5 11h5M6 17v2M18 17v2"/>'),
+    bezbarier: P('<circle cx="11" cy="4.5" r="1.8"/><path d="M11 7v6h5l2 5"/><path d="M8 10.5a6 6 0 1 0 7.5 8"/>'),
+    rybnik: P('<path d="M2 15c2 0 2-1.2 4-1.2S8 15 10 15s2-1.2 4-1.2 2 1.2 4 1.2 2-1.2 4-1.2M2 19c2 0 2-1.2 4-1.2S8 19 10 19s2-1.2 4-1.2 2 1.2 4 1.2 2-1.2 4-1.2"/><path d="M7 11c2-4 8-4 10 0"/>'),
+    plocha: P('<rect x="3.5" y="3.5" width="17" height="17" rx="2"/><path d="M3.5 9.5h6v-6M14.5 20.5v-6h6"/>'),
+    ok: P('<path d="M20 6 9 17l-5-5"/>'),
+    burger: P('<path d="M4 7h16M4 12h16M4 17h16"/>'),
+  };
+
+  /* ---------------- jazyk ---------------- */
+  function initLang() {
+    let q = null;
+    try { q = new URLSearchParams(location.search).get('lang'); } catch (e) { /* nic */ }
+    const saved = ls('vs_lang_' + O.id);
+    const pick = [q, saved, (navigator.language || 'cs').slice(0, 2)].find((x) => x && JAZYKY.indexOf(x) >= 0);
+    state.lang = pick || 'cs';
+  }
+  function setLang(l) {
+    if (JAZYKY.indexOf(l) < 0) return;
+    state.lang = l; ls('vs_lang_' + O.id, l);
+    document.documentElement.lang = l;
+    renderAll();
+  }
+
+  /* ---------------- obsazenost ---------------- */
+  /* Den = celé číslo YYYYMMDD. BOOKED = obsazené NOCI. */
+  let BOOKED = new Set();
+  const dkey = (d) => d.getFullYear() * 10000 + (d.getMonth() + 1) * 100 + d.getDate();
+  const toD = (k) => new Date(Math.floor(k / 10000), Math.floor(k / 100) % 100 - 1, k % 100);
+  const addDays = (k, n) => { const d = toD(k); d.setDate(d.getDate() + n); return dkey(d); };
+  const nightsBetween = (a, b) => Math.round((toD(b) - toD(a)) / 86400000);
+
+  /* Ukázková obsazenost: deterministická (stejná při každém otevření), seeded id objektu.
+     Hlavní sezóna a víkendy se plní častěji, ať kalendář vypadá věrohodně
+     a zároveň v něm zbývá dost volna na vyzkoušení kalkulace. */
+  function demoAvailability() {
+    let seed = 0; for (const ch of O.id) seed = (seed * 31 + ch.charCodeAt(0)) >>> 0;
+    const rnd = () => { seed = (seed * 1664525 + 1013904223) >>> 0; return seed / 4294967296; };
+    const set = new Set();
+    const today = new Date(); today.setHours(0, 0, 0, 0);
+    let k = dkey(today); k = addDays(k, -40);
+    const end = addDays(dkey(today), 400);
+    while (k < end) {
+      const d = toD(k), m = d.getMonth() + 1, dow = d.getDay();
+      const peak = m === 7 || m === 8 || m === 2 || (m === 12 && d.getDate() >= 20) || (m === 1 && d.getDate() <= 3);
+      const shoulder = m === 1 || m === 3 || m === 6 || m === 9;
+      let len = 0;
+      if (dow === 5 && rnd() < (peak ? 0.75 : shoulder ? 0.55 : 0.38)) len = rnd() < 0.3 ? 3 : 2;
+      else if (dow === 6 && peak && rnd() < 0.6) len = 7;
+      else if (dow === 1 && rnd() < (peak ? 0.25 : 0.08)) len = 3 + Math.floor(rnd() * 3);
+      if (len) { for (let i = 0; i < len; i++) set.add(addDays(k, i)); k = addDays(k, len + (rnd() < 0.5 ? 0 : 1)); }
+      else k = addDays(k, 1);
+    }
+    return set;
+  }
+  /* Ostrý režim: JSON [{start:'YYYY-MM-DD', end:'YYYY-MM-DD'}] (např. history.json z kalendáře). */
+  async function loadAvailability() {
+    const d = O.dostupnost || { typ: 'demo' };
+    if (d.typ !== 'json' || !d.url) { BOOKED = demoAvailability(); return; }
+    try {
+      const r = await fetch(d.url, { cache: 'no-store' });
+      const rows = await r.json();
+      const set = new Set();
+      // stale = záznam už není v živém feedu platformy (storno, propadlá předrezervace) → nedrží termín
+      (Array.isArray(rows) ? rows : rows.stays || []).filter((x) => !x.stale).forEach((x) => {
+        const a = dkey(new Date(x.start + 'T12:00:00')), b = dkey(new Date(x.end + 'T12:00:00'));
+        for (let k = a; k < b; k = addDays(k, 1)) set.add(k);
+      });
+      BOOKED = set;
+    } catch (e) { BOOKED = new Set(); }
+  }
+  const isBooked = (k) => BOOKED.has(k);
+  const checkoutOnly = (k) => BOOKED.has(k) && !BOOKED.has(addDays(k, -1));
+  function rangeFree(a, b) { for (let k = a; k < b; k = addDays(k, 1)) if (BOOKED.has(k)) return false; return true; }
+
+  /* ---------------- ceník a výpočet ---------------- */
+  const C = O.cenik;
+  function mdOf(k) { const m = Math.floor(k / 100) % 100, d = k % 100; return (m < 10 ? '0' : '') + m + '-' + (d < 10 ? '0' : '') + d; }
+  function inRange(md, od, doo) { return od <= doo ? md >= od && md <= doo : md >= od || md <= doo; }
+  function seasonFor(k) {
+    const md = mdOf(k);
+    for (const s of C.sezony) if (s.od && s.do && inRange(md, s.od, s.do)) return s;
+    return C.sezony.find((s) => !s.od || !s.do) || C.sezony[C.sezony.length - 1];
+  }
+  function seasonName(s) { return L(s.nazev) || L(SEZONY[s.kod]) || s.kod; }
+
+  /* Svátky a balíčky (C.svatky): {od, do} = den příjezdu a den odjezdu (MM-DD), noci od ≤ noc < do,
+     umí přes Nový rok. S cenou = balíček za pevnou cenu, bez ceny = „individuální cena". */
+  function inPkg(k, p) { const md = mdOf(k); return p.od <= p.do ? md >= p.od && md < p.do : md >= p.od || md < p.do; }
+  function inAnyPkg(k) { return (C.svatky || []).some((p) => inPkg(k, p)); }
+  function pkgNights(p, s0) {
+    const y = Math.floor(s0 / 10000);
+    const a = p.od.split('-').map(Number), b = p.do.split('-').map(Number);
+    return Math.round((new Date(p.od <= p.do ? y : y + 1, b[0] - 1, b[1]) - new Date(y, a[0] - 1, a[1])) / 86400000);
+  }
+  function packageHit(s0, s1) {
+    for (const p of (C.svatky || [])) {
+      let hit = false;
+      for (let k = s0; k < s1; k = addDays(k, 1)) if (inPkg(k, p)) { hit = true; break; }
+      if (hit) return { p, exact: mdOf(s0) === p.od && mdOf(s1) === p.do && nightsBetween(s0, s1) === pkgNights(p, s0) };
+    }
+    return null;
+  }
+  /* Cena noci: u pobytu na týden a déle poměrná týdenní cena (tyden / 7), jinak noční sazba. */
+  function nightRate(s, n) {
+    if (s.tyden && (n >= 7 || s.noc == null)) return s.tyden / 7;
+    return s.noc;
+  }
+
+  function computeQuote(s0, s1, adults, children, pets, extraIds) {
+    const n = s0 && s1 ? nightsBetween(s0, s1) : 0;
+    const q = { nights: n, adults, children, pets, groups: [], acc: 0, cleaning: 0, fee: 0, petFee: 0, total: 0, deposit: 0, ok: false, reason: 'none', minNights: 0 };
+    if (n <= 0) return q;
+    const arr = seasonFor(s0);
+    q.minNights = arr.minNoci || C.minNoci || 1;
+    const guests = adults + children;
+    if (guests > C.maxHostu) { q.reason = 'over'; return q; }
+    const perPerson = C.model === 'osoba';
+    const charged = perPerson ? Math.max(guests, C.minOsob || 1) : 1;
+    q.charged = charged;
+    const pk = packageHit(s0, s1);
+    if (pk && !(pk.exact && pk.p.cena)) { q.reason = 'holiday'; q.pkg = pk.p; return q; }
+    if (pk) {
+      q.groups.push({ pkg: true, label: L(pk.p.nazev), n, sum: pk.p.cena });
+      q.minNights = n;
+    } else {
+      let single = true;
+      for (let k = s0; k < s1; k = addDays(k, 1)) if (seasonFor(k) !== arr) { single = false; break; }
+      const fixWeekend = !perPerson && single && arr.vikend && toD(s0).getDay() === 5 && n === arr.vikend.noci;
+      // Jen týden / víkend podle ceníku, ostatní délky pobytu cenu nemají → „na poptávku".
+      if (!fixWeekend && arr.ostatniNaPoptavku && !(single && n % 7 === 0)) { q.reason = 'ask'; return q; }
+      // Den příjezdu (např. v létě jen sobota) a nejdelší pobyt v období.
+      if (arr.dnyPrijezdu && arr.dnyPrijezdu.indexOf(toD(s0).getDay()) < 0) { q.reason = 'day'; q.days = arr.dnyPrijezdu; return q; }
+      if (arr.maxNoci && n > arr.maxNoci) { q.reason = 'max'; q.maxNights = arr.maxNoci; return q; }
+      // Víkend za pevnou cenu (příjezd v pátek, celý v jednom období) — splňuje i „jen týdenní pobyty".
+      if (fixWeekend) {
+        q.groups.push({ s: arr, n, sum: arr.vikend.cena, weekendFix: true });
+        q.minNights = n;
+      } else {
+        const map = {}, order = [];
+        for (let k = s0; k < s1; k = addDays(k, 1)) {
+          const s = seasonFor(k);
+          const rate = nightRate(s, n);
+          if (!map[s.kod]) { map[s.kod] = { s, n: 0, sum: 0, rate, week: !!(s.tyden && n >= 7) }; order.push(s.kod); }
+          map[s.kod].n++; map[s.kod].sum += rate * charged;
+        }
+        order.forEach((c) => { map[c].sum = Math.round(map[c].sum); q.groups.push(map[c]); });
+        // Víkendová sazba za 2 noci (příjezd pá/so, obě noci v jedné sezóně) — jen když je výhodnější.
+        if (!perPerson && n === 2 && q.groups.length === 1 && arr.vikend2) {
+          const dow = toD(s0).getDay();
+          if ((dow === 5 || dow === 6) && arr.vikend2 < q.groups[0].sum) { q.groups[0].sum = arr.vikend2; q.groups[0].weekend = true; }
+        }
+      }
+    }
+    // Sleva „každá 7. noc zdarma" (jen u pobytu v jednom období, který má tuhle slevu).
+    q.discount = 0;
+    if (!pk && q.groups.length === 1 && q.groups[0].s && q.groups[0].s.volnaNocZaTyden && n >= 7) {
+      q.discount = Math.floor(n / 7) * q.groups[0].s.volnaNocZaTyden * Math.round((q.groups[0].rate || q.groups[0].s.noc) * charged);
+    }
+    q.acc = q.groups.reduce((a, g) => a + g.sum, 0) - q.discount;
+    // Příplatky zaškrtnuté ve formuláři (sauna, sud…): pevná cena, nebo cena podle délky pobytu.
+    q.extras = (C.priplatky || []).filter((x) => (extraIds || []).indexOf(x.id) >= 0)
+      .map((x) => ({ x, sum: typeof x.cena === 'number' ? x.cena : (n <= x.cena.doNoci ? x.cena.cena : x.cena.jinak) }));
+    q.cleaning = C.uklid || 0;
+    q.fee = Math.round(adults * n * (C.poplatekZPobytu || 0));
+    q.petFee = C.pesNoc ? pets * C.pesNoc * n : (C.pes ? pets * C.pes : 0);
+    q.total = q.acc + q.cleaning + q.fee + q.petFee + q.extras.reduce((a, e) => a + e.sum, 0);
+    q.deposit = Math.round(q.total * (C.zalohaPct || 0) / 100);
+    q.ok = n >= q.minNights;
+    q.reason = q.ok ? 'ok' : 'min';
+    return q;
+  }
+
+  /* ---------------- vykreslení ---------------- */
+  function heroImg() { return O.fotky[(O.hero && O.hero.foto) || 0]; }
+
+  function renderNav() {
+    const nav = $('#vs-nav');
+    nav.innerHTML = '';
+    const langGroup = () => el('div', { class: 'vs-lang', role: 'group', 'aria-label': 'Language' },
+      JAZYKY.map((l) => el('button', { type: 'button', 'aria-pressed': String(l === state.lang), onclick: () => setLang(l), html: '<span>' + l.toUpperCase() + '</span>' })));
+    const links = el('nav', { class: 'vs-links', id: 'vs-links', 'aria-label': 'Menu' }, [
+      el('a', { href: '#o-dome', text: t('nav.about') }),
+      el('a', { href: '#fotky', text: t('nav.photos') }),
+      el('a', { href: '#vybaveni', text: t('nav.amenities') }),
+      el('a', { href: '#okoli', text: t('nav.location') }),
+      el('a', { href: '#ceny', text: t('nav.prices') }),
+      langGroup(), // na mobilu je přepínač jazyka v menu (v liště by uřízl název domu)
+    ]);
+    links.addEventListener('click', (e) => { if (e.target.tagName === 'A') links.classList.remove('open'); });
+    const lang = langGroup();
+    nav.appendChild(el('div', { class: 'in' }, [
+      el('a', { class: 'vs-logo', href: '#top', text: O.nazev }),
+      links,
+      lang,
+      el('a', { class: 'vs-btn', href: '#ceny', text: t('nav.book') }),
+      el('button', { class: 'vs-burger', type: 'button', 'aria-label': 'Menu', html: IKONY.burger, onclick: () => links.classList.toggle('open') }),
+    ]));
+  }
+
+  function renderHero() {
+    const f = O.fakta || {};
+    const h = $('#top'); h.innerHTML = '';
+    const img = heroImg();
+    h.appendChild(el('img', { class: 'bg', src: img.url, alt: L(img.popis) || O.nazev, fetchpriority: 'high' }));
+    const chips = [];
+    if (f.kapacita) chips.push([IKONY.hoste, t('hero.guests', { n: f.kapacita })]);
+    if (f.loznice) chips.push([IKONY.loznice, plural('hero.bedrooms', f.loznice)]);
+    if (f.koupelny) chips.push([IKONY.koupelny, plural('hero.bathrooms', f.koupelny)]);
+    (O.hero && O.hero.chips || []).forEach((c) => { if (VYBAVENI[c]) chips.push([IKONY[c] || '', L(VYBAVENI[c])]); });
+    h.appendChild(el('div', { class: 'in' }, [
+      el('div', { class: 'kicker', text: [L(O.typ), L(O.region)].filter(Boolean).join(' · ') }),
+      el('h1', { text: O.nazev }),
+      el('p', { class: 'claim', text: L(O.claim) }),
+      el('div', { class: 'vs-chips' }, chips.map((c) => el('span', { class: 'vs-chip', html: c[0] + '<span>' + esc(c[1]) + '</span>' }))),
+      el('div', { class: 'ctas' }, [
+        el('a', { class: 'vs-btn', href: '#ceny', html: esc(t('hero.check')) + ' <span aria-hidden="true">→</span>' }),
+        el('a', { class: 'vs-btn ghost', href: '#fotky', text: t('hero.photos') }),
+      ]),
+    ]));
+  }
+
+  function renderRatings() {
+    const box = $('#vs-ratings');
+    const r = O.hodnoceni || [];
+    if (!r.length) { box.hidden = true; return; }
+    box.hidden = false; box.innerHTML = '';
+    r.forEach((x) => box.appendChild(el('div', { class: 'vs-rating' }, [
+      el('span', { class: 'sc', text: Number(x.skore).toFixed(1).replace('.', state.lang === 'en' ? '.' : ',') + (x.z ? '/' + x.z : '') }),
+      el('span', { class: 'pl', text: x.platforma }),
+      x.pocet ? el('span', { class: 'ct', text: t('rating.reviews', { n: fmtNum(x.pocet) }) }) : null,
+    ])));
+    if (O.hodnoceniOvereno) box.appendChild(el('div', { class: 'chk', text: t('rating.title') + ' · ' + t('rating.checked', { d: fmtDate(O.hodnoceniOvereno) }) }));
+  }
+
+  function renderAbout() {
+    const box = $('#o-dome .in'); box.innerHTML = '';
+    const f = O.fakta || {};
+    const stats = [];
+    [['kapacita', f.kapacita], ['loznice', f.loznice], ['koupelny', f.koupelny], ['luzka', f.luzka], ['plocha', f.plocha], ['pozemek', f.pozemek], ['vyska', f.vyska]]
+      .forEach((p) => { if (p[1]) stats.push(el('div', { class: 'vs-stat' }, [el('div', { class: 'n', text: fmtNum(p[1]) }), el('div', { class: 'l', text: t('facts.' + p[0]) })])); });
+    if (stats.length % 2) stats.pop();
+    const paras = (L(O.popis) || '').split(/\n\n+/).filter(Boolean);
+    box.appendChild(el('div', { class: 'txt' }, [
+      el('span', { class: 'vs-eyebrow', text: t('about.eyebrow') }),
+      el('h2', { class: 'vs-h2', text: L(O.nadpis) || t('about.whole') }),
+      ...paras.map((p) => el('p', { text: p })),
+      (O.zvyrazneni && O.zvyrazneni.length) ? el('ul', { class: 'vs-highl' }, O.zvyrazneni.map((z) => el('li', { text: L(z) }))) : null,
+    ]));
+    box.appendChild(el('div', { class: 'vs-stats' }, stats));
+  }
+
+  function renderGallery() {
+    const g = $('#vs-gal'); g.innerHTML = '';
+    const show = Math.min(O.fotky.length, 9);
+    for (let i = 0; i < show; i++) {
+      const f = O.fotky[i];
+      const b = el('button', { type: 'button', 'aria-label': L(f.popis) || L(FOTO_KAT[f.kat]) || O.nazev, onclick: () => openLb(i) },
+        [el('img', { src: f.url, alt: L(f.popis) || L(FOTO_KAT[f.kat]) || '', loading: 'lazy' })]);
+      if (i === show - 1 && O.fotky.length > show) b.appendChild(el('span', { class: 'more', text: t('gallery.all', { n: O.fotky.length }) }));
+      g.appendChild(b);
+    }
+    $('#fotky .vs-eyebrow').textContent = t('gallery.eyebrow');
+    $('#fotky .vs-h2').textContent = t('gallery.title');
+  }
+
+  function renderAmenities() {
+    const box = $('#vs-amen'); box.innerHTML = '';
+    (O.vybaveni || []).forEach((k) => {
+      // kód z VYBAVENI, nebo vlastní položka {cs, en, de, pl, ikona}
+      const custom = typeof k === 'object';
+      const lab = custom ? L(k) : VYBAVENI[k] ? L(VYBAVENI[k]) : k;
+      const ic = (custom ? IKONY[k.ikona] : IKONY[k]) || IKONY.ok;
+      box.appendChild(el('div', { class: 'vs-am', html: ic + '<span>' + esc(lab) + '</span>' }));
+    });
+    $('#vybaveni .vs-eyebrow').textContent = t('amen.eyebrow');
+    $('#vybaveni .vs-h2').textContent = t('amen.title');
+  }
+
+  function renderLocation() {
+    $('#okoli .vs-eyebrow').textContent = t('loc.eyebrow');
+    $('#okoli .vs-h2').textContent = L(O.lokalitaNadpis) || t('loc.title');
+    $('#okoli .vs-lead').textContent = L(O.lokalitaText) || '';
+    const ul = $('#vs-near'); ul.innerHTML = '';
+    (O.okoli || []).forEach((x) => ul.appendChild(el('li', {}, [
+      x.nazev ? el('div', {}, [el('span', { class: 'w', text: L(OKOLI_TYP[x.typ]) || '' }), el('span', { text: L(x.nazev) })])
+        : el('div', {}, [el('span', { text: L(OKOLI_TYP[x.typ]) || '' })]),
+      el('span', { class: 'k', text: x.km != null ? fmtKm(x.km) + ' ' + t('loc.km') : L(x.text) }),
+    ])));
+    const g = O.gps;
+    const map = $('#vs-map'); map.innerHTML = '';
+    if (g && g.lat) {
+      const dLat = 0.035, dLon = 0.06;
+      const bbox = [g.lon - dLon, g.lat - dLat, g.lon + dLon, g.lat + dLat].map((v) => v.toFixed(5)).join(',');
+      map.appendChild(el('iframe', { title: t('loc.title'), loading: 'lazy', src: 'https://www.openstreetmap.org/export/embed.html?bbox=' + bbox + '&layer=mapnik&marker=' + g.lat + ',' + g.lon }));
+      const a = $('#vs-maplink');
+      a.href = 'https://www.openstreetmap.org/?mlat=' + g.lat + '&mlon=' + g.lon + '#map=13/' + g.lat + '/' + g.lon;
+      a.textContent = t('loc.map') + (g.priblizne ? ' · ' + t('loc.approx') : '');
+    }
+  }
+
+  function renderPrices() {
+    $('#ceny .vs-eyebrow').textContent = t('book.eyebrow');
+    $('#ceny .vs-h2').textContent = t('book.title');
+    $('#ceny .vs-lead').textContent = C.model === 'osoba' ? t('book.bodyPerson') : t('book.body');
+    const box = $('#vs-prices'); box.innerHTML = '';
+    const rows = C.sezony.map((s) => {
+      const dates = s.od && s.do ? fmtMD(s.od) + ' – ' + fmtMD(s.do) : '';
+      let main, sub, min;
+      if (s.tyden) {
+        // Týdenní ceník (běžný u velkých chalup): týden, víkend za pevnou cenu, jiné pobyty za noc.
+        main = money(s.tyden) + ' / ' + t('book.week');
+        sub = [s.vikend ? weekendLabel(s.vikend) + ' ' + money(s.vikend.cena) : '', s.noc ? t('book.otherNight', { p: money(s.noc) }) : ''].filter(Boolean).join(' · ');
+        min = (s.minNoci || 1) >= 7 ? (s.vikend ? t('book.minWeek') : plural('book.weeks', 1)) : plural('book.nights', s.minNoci || C.minNoci || 1);
+      } else {
+        main = money(s.noc);
+        sub = (C.model === 'osoba' ? t('book.perPerson') + (C.minOsob ? ' · ' + t('book.minPersons', { n: C.minOsob }) : '') : t('book.perHouse')) +
+          (s.vikend2 && C.model !== 'osoba' ? ' · ' + t('book.weekend', { p: money(s.vikend2) }) : '');
+        min = plural('book.nights', s.minNoci || C.minNoci || 1);
+      }
+      return el('tr', {}, [
+        el('td', {}, [el('div', { text: seasonName(s) }), dates ? el('div', { class: 'dates', text: dates }) : null]),
+        el('td', { class: 'p', html: esc(main) + '<span class="sub">' + esc(sub) + '</span>' }),
+        el('td', { text: min }),
+      ]);
+    });
+    (C.svatky || []).forEach((p) => rows.push(el('tr', {}, [
+      el('td', {}, [el('div', { text: L(p.nazev) || t('book.holiday') }), el('div', { class: 'dates', text: fmtMD(p.od) + ' – ' + fmtMD(p.do) })]),
+      p.cena ? el('td', { class: 'p', html: esc(money(p.cena)) + '<span class="sub">' + esc(t('book.packageSub')) + '</span>' }) : el('td', { text: t('book.holidayVal') }),
+      el('td', { text: p.cena ? plural('book.nights', pkgNights(p, dkey(new Date()))) : '' }),
+    ])));
+    box.appendChild(el('table', {}, [
+      el('thead', {}, [el('tr', {}, [el('th', { text: t('book.season') }), el('th', { text: C.sezony.some((x) => x.tyden) ? t('book.price') : t('book.nightly') }), el('th', { text: t('book.minStay') })])]),
+      el('tbody', {}, rows),
+    ]));
+    const ex = [];
+    if (C.uklid) ex.push([t('book.cleaning'), money(C.uklid)]);
+    if (C.poplatekZPobytu) ex.push([t('book.localFee'), t('book.localFeeVal', { p: money(C.poplatekZPobytu) })]);
+    ex.push([t('book.pets'), C.pesNoc ? t('book.petsNight', { p: money(C.pesNoc) }) : C.pes ? t('book.petsVal', { p: money(C.pes) }) : (O.pravidla && O.pravidla.zvirata ? t('info.petsYes') : t('book.noPets'))]);
+    (C.priplatky || []).forEach((x) => ex.push([L(x.nazev), extraPrice(x)]));
+    if (C.kauce) ex.push([t('book.bond'), money(C.kauce)]);
+    if (C.zalohaPct) ex.push([t('book.deposit'), C.zalohaPct + ' %']);
+    box.appendChild(el('div', { class: 'vs-extras' }, ex.map((e) => el('div', {}, [el('b', { text: e[0] }), el('span', { text: e[1] })]))));
+    if (C.poznamka || C.orientacni) box.appendChild(el('div', { class: 'vs-pnote', text: [C.orientacni ? t('book.indicative') : '', L(C.poznamka)].filter(Boolean).join(' ') }));
+  }
+  /* „víkend Pá–Ne": příjezd v pátek, konec podle počtu nocí. */
+  function extraPrice(x) { return typeof x.cena === 'number' ? money(x.cena) : t('book.extraTier', { p: money(x.cena.cena), n: x.cena.doNoci, q: money(x.cena.jinak) }); }
+  function weekendLabel(v) { const d = T().dow; return t('book.weekendFri', { od: d[4], do: d[(4 + v.noci) % 7] }); }
+  function fmtMD(md) {
+    const [m, d] = md.split('-').map(Number);
+    if (state.lang === 'en') return d + ' ' + T().months[m - 1].slice(0, 3);
+    return d + '. ' + m + '.';
+  }
+
+  /* ---------------- kalendář ---------------- */
+  const CAL_MAX = 14;
+  function renderCalendar() {
+    const host = $('#vs-cal'); host.innerHTML = '';
+    const today = new Date(); today.setHours(0, 0, 0, 0);
+    const tk = dkey(today);
+    [0, 1].forEach((off) => {
+      const base = new Date(today.getFullYear(), today.getMonth() + state.calOff + off, 1);
+      const y = base.getFullYear(), m = base.getMonth();
+      const lead = (base.getDay() + 6) % 7, dim = new Date(y, m + 1, 0).getDate();
+      const grid = el('div', { class: 'vs-grid' }, T().dow.map((w) => el('div', { class: 'vs-dow', text: w })));
+      for (let i = 0; i < lead; i++) grid.appendChild(el('span', { class: 'vs-day', 'data-s': 'e', 'aria-hidden': 'true' }));
+      for (let d = 1; d <= dim; d++) {
+        const k = y * 10000 + (m + 1) * 100 + d;
+        let s = k < tk ? 'p' : isBooked(k) ? (checkoutOnly(k) ? 'c' : 'b') : 'f';
+        if (s === 'f' || s === 'c') {
+          if (k === state.s0 || k === state.s1) s = 's';
+          else if (s === 'f' && state.s0 && state.s1 && k > state.s0 && k < state.s1) s = 'r';
+        }
+        const b = el('button', { type: 'button', class: 'vs-day', 'data-s': s, text: String(d), 'aria-label': d + '. ' + (m + 1) + '. ' + y });
+        if (s !== 'p' && s !== 'b') b.addEventListener('click', () => pickDay(k));
+        else b.disabled = true;
+        grid.appendChild(b);
+      }
+      host.appendChild(el('div', {}, [el('div', { class: 'ttl', text: T().months[m] + ' ' + y }), grid]));
+    });
+    $('#vs-prev').disabled = state.calOff <= 0;
+    $('#vs-next').disabled = state.calOff >= CAL_MAX;
+    $('#vs-prev').setAttribute('aria-label', t('book.prev'));
+    $('#vs-next').setAttribute('aria-label', t('book.next'));
+    $('#vs-calhint').textContent = !state.s0 || state.s1 ? t('book.pickArrival') : t('book.pickDeparture');
+    $('#vs-legend').innerHTML = '<span><i style="background:var(--day-free)"></i>' + esc(t('book.free')) + '</span>' +
+      '<span><i style="background:var(--day-booked);border-color:transparent"></i>' + esc(t('book.booked')) + '</span>' +
+      '<span><i style="background:var(--accent);border-color:var(--accent)"></i>' + esc(t('book.chosen')) + '</span>' +
+      '<span><i style="background:linear-gradient(135deg,var(--day-free) 0 50%,var(--day-booked) 50%)"></i>' + esc(t('book.checkoutOnly')) + '</span>';
+    const da = $('#vs-demoavail');
+    da.hidden = !!(O.dostupnost && O.dostupnost.typ === 'json');
+    da.textContent = t('book.demoAvail');
+  }
+  function pickDay(k) {
+    const blockedMsg = $('#vs-calmsg');
+    blockedMsg.hidden = true;
+    if (!state.s0 || state.s1) {
+      if (isBooked(k) && !checkoutOnly(k)) return;
+      if (isBooked(k)) return; // den „jen odjezd" nemůže být příjezdem
+      state.s0 = k; state.s1 = 0;
+    } else if (k <= state.s0) {
+      if (isBooked(k)) return;
+      state.s0 = k; state.s1 = 0;
+    } else {
+      if (!rangeFree(state.s0, k)) { blockedMsg.hidden = false; blockedMsg.textContent = t('book.blockedMsg'); state.s0 = isBooked(k) ? 0 : k; state.s1 = 0; }
+      else state.s1 = k;
+    }
+    renderCalendar(); renderQuote();
+  }
+
+  /* ---------------- souhrn a formulář ---------------- */
+  function readGuests() {
+    const v = (id) => Math.max(0, parseInt(($(id) || {}).value, 10) || 0);
+    const x = [].slice.call(document.querySelectorAll('#vs-extras input:checked')).map((i) => i.value);
+    return { a: Math.max(1, v('#vs-adults')), c: v('#vs-children'), p: v('#vs-pets'), x };
+  }
+  function renderQuote() {
+    const g = readGuests();
+    const sel = $('#vs-selbox');
+    const q = computeQuote(state.s0, state.s1, g.a, g.c, g.p, g.x);
+    state.quote = q;
+    if (!state.s0) sel.innerHTML = esc(t('book.pickArrival'));
+    else if (!state.s1) sel.innerHTML = esc(fmtK(state.s0)) + ' → …';
+    else sel.innerHTML = esc(fmtK(state.s0) + ' → ' + fmtK(state.s1)) + '<span class="nl">' + esc(plural('book.nights', q.nights)) + '</span>';
+    const box = $('#vs-quote'), msg = $('#vs-qmsg');
+    box.innerHTML = ''; msg.hidden = true;
+    if (!state.s1) { box.hidden = true; return; }
+    if (q.reason === 'holiday') {
+      msg.hidden = false; box.hidden = true;
+      msg.textContent = q.pkg && q.pkg.cena
+        ? t('book.packageMsg', { name: L(q.pkg.nazev), od: fmtMD(q.pkg.od), do: fmtMD(q.pkg.do), p: money(q.pkg.cena) })
+        : t('book.holidayMsg');
+      return;
+    }
+    if (q.reason === 'over') { msg.hidden = false; msg.textContent = t('book.overMsg', { n: C.maxHostu }); box.hidden = true; return; }
+    if (q.reason === 'min') { msg.hidden = false; msg.textContent = t('book.minStayMsg', { n: plural('book.nights', q.minNights) }); box.hidden = true; return; }
+    if (q.reason === 'ask') { msg.hidden = false; msg.textContent = t('book.askMsg'); box.hidden = true; return; }
+    if (q.reason === 'day') { msg.hidden = false; msg.textContent = t('book.dayMsg', { d: q.days.map((d) => T().dowOn[(d + 6) % 7]).join(' / ') }); box.hidden = true; return; }
+    if (q.reason === 'max') { msg.hidden = false; msg.textContent = t('book.maxMsg', { n: plural('book.nights', q.maxNights) }); box.hidden = true; return; }
+    box.hidden = false;
+    const row = (k, v, cls) => el('div', { class: 'row' + (cls ? ' ' + cls : '') }, [el('span', { text: k }), el('span', { class: 'v', text: v })]);
+    q.groups.forEach((gr) => {
+      let text;
+      if (gr.pkg) text = t('book.package') + ' · ' + gr.label;
+      else if (gr.weekendFix) text = t('book.accommodation') + ' · ' + weekendLabel(gr.s.vikend);
+      else {
+        const label = q.groups.length > 1 ? seasonName(gr.s) : t('book.accommodation');
+        let detail;
+        if (gr.weekend) detail = t('book.weekend', { p: '' }).trim();
+        else if (gr.week && q.groups.length === 1 && gr.n % 7 === 0) detail = plural('book.weeks', gr.n / 7);
+        else if (C.model === 'osoba') detail = money(gr.rate) + ' × ' + q.charged + ' × ' + gr.n;
+        else detail = t('book.perNight', { p: money(gr.rate), n: gr.n });
+        text = label + ' · ' + detail;
+      }
+      box.appendChild(row(text, money(gr.sum)));
+    });
+    if (q.discount) box.appendChild(row(t('book.discount'), '−' + money(q.discount)));
+    q.extras.forEach((e) => box.appendChild(row(L(e.x.nazev), money(e.sum))));
+    if (q.cleaning) box.appendChild(row(t('book.cleaning'), money(q.cleaning)));
+    if (q.fee) box.appendChild(row(t('book.localFee'), money(q.fee)));
+    if (q.petFee) box.appendChild(row(t('book.pets'), money(q.petFee)));
+    box.appendChild(row(t('book.total'), money(q.total), 'tot'));
+    const f = fx(q.total); if (f) box.appendChild(el('div', { class: 'fx', text: f }));
+    if (C.zalohaPct) box.appendChild(row(t('book.depositLine', { p: C.zalohaPct }), money(q.deposit), 'dep'));
+  }
+  function fmtK(k) { const d = toD(k); return d.toLocaleDateString({ cs: 'cs-CZ', en: 'en-GB', de: 'de-DE', pl: 'pl-PL' }[state.lang], { day: 'numeric', month: 'short' }); }
+
+  function renderForm() {
+    const f = $('#vs-form');
+    f.querySelectorAll('[data-t]').forEach((n) => { n.textContent = t(n.getAttribute('data-t')); });
+    f.querySelectorAll('[data-ph]').forEach((n) => { n.placeholder = t(n.getAttribute('data-ph')); });
+    $('#vs-adults').max = C.maxHostu; $('#vs-children').max = C.maxHostu - 1;
+    const pets = $('#vs-petsfield'); pets.hidden = !(C.pes || C.pesNoc);
+    const ex = $('#vs-extras'); ex.innerHTML = '';
+    (C.priplatky || []).forEach((x) => {
+      const cb = el('input', { type: 'checkbox', value: x.id });
+      cb.addEventListener('change', renderQuote);
+      ex.appendChild(el('label', { class: 'vs-extra' }, [cb, el('span', { text: L(x.nazev) }), el('em', { text: extraPrice(x) })]));
+    });
+    ex.hidden = !(C.priplatky || []).length;
+    $('#vs-ok h3').textContent = t('form.okTitle');
+    $('#vs-ok p').textContent = DEMO ? t('form.okBody') : '';
+    $('#vs-again').textContent = t('form.again');
+  }
+  function submitForm(e) {
+    e.preventDefault();
+    const err = $('#vs-ferr');
+    const name = $('#vs-name').value.trim(), mail = $('#vs-email').value.trim();
+    let m = '';
+    if (!state.s0 || !state.s1) m = t('form.errDates');
+    else if (!name) m = t('form.errName');
+    else if (!/^[^@\s]+@[^@\s]+\.[^@\s]+$/.test(mail)) m = t('form.errEmail');
+    if (m) { err.hidden = false; err.textContent = m; return; }
+    err.hidden = true;
+    // Ostrý web: tady se volá RPC poptávky (Supabase) a majitel dostane okamžité upozornění.
+    $('#vs-form').hidden = true; $('#vs-ok').hidden = false;
+  }
+
+  function renderInfo() {
+    $('#info .vs-eyebrow').textContent = t('info.eyebrow');
+    $('#info .vs-h2').textContent = t('info.title');
+    const p = O.pravidla || {};
+    const items = [];
+    if (p.checkIn) items.push([t('info.checkin'), t('info.from', { p: p.checkIn })]);
+    if (p.checkOut) items.push([t('info.checkout'), t('info.until', { p: p.checkOut })]);
+    items.push([t('info.pets'), p.zvirata ? t('info.petsYes') : t('info.petsNo')]);
+    if (p.koureni) items.push([t('info.smoking'), p.koureni === 'venku' ? t('info.smokingOut') : t('info.smokingNo')]);
+    if (p.akce) items.push([t('info.parties'), p.akce === 'dohoda' ? t('info.partiesAsk') : t('info.partiesNo')]);
+    if (p.klid) items.push([t('info.quiet'), p.klid]);
+    if (p.parkovani) items.push([t('info.parking'), L(p.parkovani)]);
+    if (C.zalohaPct) items.push([t('info.payment'), t('info.paymentVal', { p: C.zalohaPct })]);
+    const box = $('#vs-info'); box.innerHTML = '';
+    items.forEach((i) => box.appendChild(el('div', {}, [el('b', { text: i[0] }), el('span', { text: i[1] })])));
+  }
+
+  function renderFoot() {
+    const k = O.kontakt || {};
+    const box = $('#vs-foot'); box.innerHTML = '';
+    box.appendChild(el('div', { class: 'in' }, [
+      el('div', {}, [el('div', { class: 'nm', text: O.nazev }), el('div', { text: [O.adresa || O.obec, L(O.region)].filter(Boolean).join(', ') })]),
+      el('div', {}, [el('b', { text: t('foot.contact') }), el('div', { text: k.email || k.telefon ? [k.email, k.telefon].filter(Boolean).join(' · ') : t('foot.contactDemo') })]),
+      el('div', {}, [el('div', {}, [el('a', { href: '#', text: t('foot.terms') })]), el('div', {}, [el('a', { href: '#', text: t('foot.privacy') })])]),
+    ]));
+    box.appendChild(el('div', { class: 'made', text: t('foot.made') + (N && N.znacka ? ' · ' + N.znacka : '') }));
+    // Ukázka: fotky jsou majitelovy (z jeho veřejného inzerátu) — vždy to říct nahlas a nabídnout smazání.
+    if (DEMO && O.demo && O.demo.fotkyZdroj) box.appendChild(el('div', { class: 'made', text: 'Fotky: ' + O.demo.fotkyZdroj + ' (© autor fotografií) — použité jen pro tuto neveřejnou ukázku pro majitele objektu. Na požádání je hned smažu.' }));
+  }
+
+  /* ---------------- lightbox ---------------- */
+  function openLb(i) { state.lb = i; $('#vs-lb').classList.add('open'); drawLb(); $('#vs-lb .x').focus(); }
+  function closeLb() { state.lb = -1; $('#vs-lb').classList.remove('open'); }
+  function stepLb(d) { state.lb = (state.lb + d + O.fotky.length) % O.fotky.length; drawLb(); }
+  function drawLb() {
+    const f = O.fotky[state.lb];
+    $('#vs-lb img').src = f.url;
+    $('#vs-lb img').alt = L(f.popis) || L(FOTO_KAT[f.kat]) || '';
+    $('#vs-lb .cap').textContent = (state.lb + 1) + ' / ' + O.fotky.length + (L(f.popis) || L(FOTO_KAT[f.kat]) ? ' · ' + (L(f.popis) || L(FOTO_KAT[f.kat])) : '');
+    $('#vs-lb .x').setAttribute('aria-label', t('lb.close'));
+    $('#vs-lb .pv').setAttribute('aria-label', t('lb.prev'));
+    $('#vs-lb .nx').setAttribute('aria-label', t('lb.next'));
+  }
+  function wireLb() {
+    const lb = $('#vs-lb');
+    $('.x', lb).onclick = closeLb; $('.pv', lb).onclick = () => stepLb(-1); $('.nx', lb).onclick = () => stepLb(1);
+    lb.addEventListener('click', (e) => { if (e.target === lb) closeLb(); });
+    let x0 = null;
+    lb.addEventListener('touchstart', (e) => { x0 = e.touches[0].clientX; }, { passive: true });
+    lb.addEventListener('touchend', (e) => { if (x0 == null) return; const dx = e.changedTouches[0].clientX - x0; if (Math.abs(dx) > 40) stepLb(dx < 0 ? 1 : -1); x0 = null; });
+    document.addEventListener('keydown', (e) => {
+      if (state.lb >= 0) { if (e.key === 'Escape') closeLb(); if (e.key === 'ArrowRight') stepLb(1); if (e.key === 'ArrowLeft') stepLb(-1); }
+      else if (e.key === 'Escape' && $('#vs-owner').classList.contains('open')) closeOwner();
+    });
+  }
+
+  /* ================== PANEL PRO MAJITELE (jen v demu, vždy česky) ================== */
+  let ownerTab = 'nabidka';
+  function openOwner(tab) { if (tab) ownerTab = tab; $('#vs-owner').classList.add('open'); drawOwner(); $('#vs-owner .close').focus(); document.body.style.overflow = 'hidden'; }
+  function closeOwner() { $('#vs-owner').classList.remove('open'); document.body.style.overflow = ''; }
+  function kc(n) { return String(Math.round(n)).replace(/\B(?=(\d{3})+(?!\d))/g, ' ') + ' Kč'; }
+
+  function drawOwner() {
+    const tabs = [['nabidka', 'Co dostanete'], ['uspora', 'Kolik ušetříte'], ['admin', 'Zkuste si administraci'], ['jak', 'Jak to funguje']];
+    $('#vs-otabs').innerHTML = '';
+    tabs.forEach((x) => $('#vs-otabs').appendChild(el('button', { type: 'button', role: 'tab', 'aria-selected': String(x[0] === ownerTab), text: x[1], onclick: () => { ownerTab = x[0]; drawOwner(); } })));
+    const b = $('#vs-obody'); b.innerHTML = ''; b.scrollTop = 0;
+    ({ nabidka: ownerOffer, uspora: ownerSavings, admin: ownerAdmin, jak: ownerHow })[ownerTab](b);
+    b.appendChild(ownerCta());
+  }
+
+  function ownerOffer(b) {
+    if (!N) { b.appendChild(el('p', { text: 'Chybí nabidka.json.' })); return; }
+    const z = N.zaklad;
+    if (O.demo && O.demo.proMajitele) b.appendChild(el('div', { class: 'vs-res', style: 'margin:0 0 22px' }, [el('div', { class: 'row' }, [el('span', { text: O.demo.proMajitele })])]));
+    b.appendChild(el('h3', { text: 'Základ: ' + z.nazev }));
+    b.appendChild(el('div', { class: 'vs-pack' }, [
+      el('div', { class: 'pr' }, [el('b', { text: kc(z.cena) }), z.cenaPuvodni ? el('s', { text: kc(z.cenaPuvodni) }) : null, el('span', { class: 'muted', text: z.cenaPopis })]),
+      el('div', { class: 'small', text: z.provoz }),
+      el('ul', {}, z.obsah.map((x) => el('li', { text: x }))),
+    ]));
+    // Moduly se ukážou, jen když v nabidka.json nějaké jsou (od 17. 11. 2026 panel prodává jen web).
+    if (N.moduly && N.moduly.length) {
+      b.appendChild(el('h3', { text: 'Moduly — dokoupíte, kdy chcete' }));
+      b.appendChild(el('div', { class: 'vs-mods' }, N.moduly.map((m) => el('div', { class: 'vs-mod' + (m.pozdeji ? ' soon' : '') }, [
+        el('div', { class: 'n', text: m.nazev }), el('div', { class: 'p', text: m.cenaText || kc(m.cena) }), el('div', { class: 'd', text: m.popis }),
+      ]))));
+    }
+    if (N.poznamka) b.appendChild(el('p', { class: 'small', text: N.poznamka }));
+  }
+
+  /* Cena za noc pro řazení sezón: noční sazba, jinak poměrná týdenní (17. 11. 2026: objekty jen s týdenní cenou). */
+  function nightRate(s) { return s.noc != null ? s.noc : (s.tyden ? s.tyden / 7 : 0); }
+  /* Cena ubytování za pobyt na n nocí pro panel majitele. Bez noční sazby: víkendová cena, nad 3 noci týdenní. */
+  function ownerStayPrice(s, n) {
+    if (s.noc != null) return (C.model === 'osoba' ? s.noc * Math.max(12, C.minOsob || 1) : s.noc) * n;
+    if (s.vikend && (n <= 3 || !s.tyden)) return s.vikend.cena;
+    return s.tyden || 0;
+  }
+  function typicalStayInfo() {
+    // Typický pobyt v tomto domě v nejdražší sezóně: 3 noci (plná kapacita × 0,7), bez noční sazby víkend nebo týden.
+    const s = C.sezony.slice().sort((a, b2) => nightRate(b2) - nightRate(a))[0];
+    const guests = Math.max(1, Math.round((C.maxHostu || 10) * 0.7));
+    let acc, label;
+    if (s.noc != null) { acc = C.model === 'osoba' ? s.noc * Math.max(guests, C.minOsob || 1) * 3 : s.noc * 3; label = 'prodloužený víkend (3 noci)'; }
+    else if (s.vikend) { acc = s.vikend.cena; label = 'víkend (' + s.vikend.noci + ' noci)'; }
+    else { acc = s.tyden || 0; label = 'týdenní pobyt'; }
+    return { price: Math.round((acc + (C.uklid || 0)) / 500) * 500, label };
+  }
+  function typicalStay() { return typicalStayInfo().price; }
+  function ownerSavings(b) {
+    const stay = typicalStay();
+    const prov = (N && N.provize) || { airbnb: 15.5, booking: 15 };
+    b.appendChild(el('h3', { text: 'Kolik vás dnes stojí provize' }));
+    b.appendChild(el('p', { class: 'muted', text: 'Výchozí hodnota je ' + typicalStayInfo().label + ' ve vašem domě podle vašeho ceníku, včetně úklidu. Upravte si čísla podle sebe.' }));
+    const f = el('div', { class: 'vs-calc' }, [
+      el('label', {}, ['Průměrná cena jednoho pobytu (Kč)', el('input', { id: 'sv-stay', type: 'number', min: '0', step: '500', value: String(stay) })]),
+      el('label', {}, ['Pobytů za rok', el('input', { id: 'sv-n', type: 'number', min: '0', step: '1', value: '30' })]),
+      el('label', {}, ['Provize platforem (%)', el('input', { id: 'sv-pct', type: 'number', min: '0', max: '40', step: '0.5', value: String(prov.vychozi || Math.round((prov.airbnb + prov.booking) / 2 * 2) / 2) })]),
+      el('label', {}, ['Kolik pobytů přesunete na přímé (%)', el('input', { id: 'sv-share', type: 'number', min: '0', max: '100', step: '5', value: '20' })]),
+      el('label', { style: 'grid-column:1/-1;flex-direction:row;align-items:center;gap:10px;font-weight:500' }, [
+        el('input', { id: 'sv-dph', type: 'checkbox', style: 'width:18px;height:18px' }),
+        'Nejsem plátce DPH — z provize zahraničních portálů odvádím navíc 21 % DPH',
+      ]),
+    ]);
+    b.appendChild(f);
+    const res = el('div', { class: 'vs-res', id: 'sv-res' });
+    b.appendChild(res);
+    const calc = () => {
+      const v = (id) => parseFloat($(id).value) || 0;
+      const stayV = v('#sv-stay'), n = v('#sv-n'), pct = v('#sv-pct'), share = v('#sv-share');
+      const perStay = stayV * pct / 100 * ($('#sv-dph').checked ? 1.21 : 1);
+      const yearAll = perStay * n;
+      const saved = yearAll * share / 100;
+      const price = N ? N.zaklad.cena : 9900;
+      const payback = perStay > 0 ? Math.ceil(price / perStay) : '—';
+      res.innerHTML = '';
+      res.appendChild(el('div', { class: 'row' }, [el('span', { text: 'Provize z jednoho pobytu' }), el('b', { text: kc(perStay) })]));
+      res.appendChild(el('div', { class: 'row' }, [el('span', { text: 'Provize za rok (všechny pobyty přes platformy)' }), el('b', { text: kc(yearAll) })]));
+      res.appendChild(el('div', { class: 'big', text: kc(saved) + ' ročně' }));
+      res.appendChild(el('div', { class: 'row' }, [el('span', { text: 'ušetříte, když ' + share + ' % hostů zarezervuje napřímo' })]));
+      res.appendChild(el('div', { class: 'row' }, [el('span', { text: 'Web za ' + kc(price) + ' se zaplatí z' }), el('b', { text: payback + ' přímých pobytů' })]));
+    };
+    f.addEventListener('input', calc); calc();
+    b.appendChild(el('p', { class: 'small', text: (N && N.provizeZdroj) || 'Provize jsou orientační; přesné číslo najdete ve výpisu z extranetu.' }));
+  }
+
+  function ownerAdmin(b) {
+    b.appendChild(el('h3', { text: 'Ceny si měníte sami' }));
+    b.appendChild(el('p', { class: 'muted', text: 'Tohle je ukázka administrace. Změňte cenu — ceník i kalkulace na webu se přepočítají hned. (Nic se neukládá.)' }));
+    const tb = el('tbody');
+    C.sezony.forEach((s, i) => {
+      const pole = s.noc != null ? 'noc' : 'tyden';
+      const inp = el('input', { type: 'number', min: '0', step: '100', value: String(s[pole] || 0), 'aria-label': 'Cena — ' + seasonName(s) });
+      inp.addEventListener('input', () => { C.sezony[i][pole] = Math.max(0, parseInt(inp.value, 10) || 0); renderPrices(); renderQuote(); ok.textContent = '✓ Web přepočítaný — zavřete panel a podívejte se do ceníku.'; });
+      const mn = el('input', { type: 'number', min: '1', step: '1', value: String(s.minNoci || 1), 'aria-label': 'Minimální pobyt — ' + seasonName(s) });
+      mn.style.width = '70px';
+      mn.addEventListener('input', () => { C.sezony[i].minNoci = Math.max(1, parseInt(mn.value, 10) || 1); renderPrices(); renderQuote(); ok.textContent = '✓ Minimální pobyt změněný.'; });
+      tb.appendChild(el('tr', {}, [el('td', {}, [el('div', { text: seasonName(s) }), el('div', { class: 'small', text: s.od ? s.od.split('-').reverse().join('. ') + '. – ' + s.do.split('-').reverse().join('. ') + '.' : 'zbytek roku' })]), el('td', {}, [inp]), el('td', {}, [mn])]));
+    });
+    const ok = el('div', { class: 'ok', text: ' ' });
+    b.appendChild(el('div', { class: 'vs-adm' }, [
+      el('div', { class: 'bar', html: '<i></i><i></i><i></i><span style="margin-left:6px">Správa · Ceník</span>' }),
+      el('table', {}, [el('thead', {}, [el('tr', {}, [el('th', { text: 'Období' }), el('th', { text: C.model === 'osoba' ? 'Kč / os. / noc' : (C.sezony.every((x) => x.noc == null) ? 'Kč / týden' : (C.sezony.some((x) => x.noc == null) ? 'Kč' : 'Kč / noc')) }), el('th', { text: 'Min. nocí' })])]), tb]),
+      ok,
+    ]));
+
+    b.appendChild(el('h3', { text: 'Poptávky a předrezervace' }));
+    const s = C.sezony[0];
+    const demoReq = [
+      ['Skupina 14 os. (smyšlená)', '+14 dní', 3, 'new', 'Nová poptávka · upozornění odešlo do mobilu'],
+      ['Rodinná oslava (smyšlená)', '+45 dní', 2, 'hold', 'Předrezervace · záloha splatná za 5 dní'],
+      ['Firemní teambuilding (smyšlený)', '+80 dní', 4, 'paid', 'Záloha uhrazena · smlouva odeslána'],
+    ];
+    const tb2 = el('tbody');
+    demoReq.forEach((r) => {
+      const price = ownerStayPrice(s, r[2]) + (C.uklid || 0);
+      tb2.appendChild(el('tr', {}, [el('td', {}, [el('div', { text: r[0] }), el('div', { class: 'small', text: r[4] })]), el('td', { text: r[1] }), el('td', { text: kc(price) }), el('td', {}, [el('span', { class: 'vs-pill ' + r[3], text: { new: 'nová', hold: 'předrezervace', paid: 'zaplaceno' }[r[3]] })])]));
+    });
+    b.appendChild(el('div', { class: 'vs-adm' }, [
+      el('div', { class: 'bar', html: '<i></i><i></i><i></i><span style="margin-left:6px">Správa · Poptávky (ukázková data)</span>' }),
+      el('table', {}, [el('thead', {}, [el('tr', {}, [el('th', { text: 'Kdo' }), el('th', { text: 'Příjezd' }), el('th', { text: 'Cena' }), el('th', { text: 'Stav' })])]), tb2]),
+    ]));
+
+    b.appendChild(el('h3', { text: 'Jeden kalendář ze všech portálů' }));
+    const tl = el('div', { class: 'vs-tl' });
+    const today = new Date();
+    for (let mo = 0; mo < 3; mo++) {
+      const base = new Date(today.getFullYear(), today.getMonth() + mo, 1);
+      const dim = new Date(base.getFullYear(), base.getMonth() + 1, 0).getDate();
+      tl.appendChild(el('div', { class: 'm', text: TEXTY.cs.months[base.getMonth()] + ' ' + base.getFullYear() }));
+      const lane = el('div', { class: 'lane' });
+      const chans = ['airbnb', 'booking', 'primo', 'echalupy'];
+      let ci = mo;
+      for (let d = 1; d <= dim; d++) {
+        const k = dkey(new Date(base.getFullYear(), base.getMonth(), d));
+        if (isBooked(k) && !isBooked(addDays(k, -1))) {
+          let len = 0; while (isBooked(addDays(k, len)) && d + len <= dim) len++;
+          const ch = chans[ci++ % chans.length];
+          lane.appendChild(el('div', { class: 'bk ' + ch, style: 'left:' + ((d - 1) / dim * 100) + '%;width:' + (len / dim * 100) + '%', text: { airbnb: 'Airbnb', booking: 'Booking', primo: 'Přímo', echalupy: 'e-chalupy' }[ch] }));
+        }
+      }
+      tl.appendChild(lane);
+    }
+    tl.appendChild(el('div', { class: 'lg', html: '<span><i style="background:#E0565B"></i>Airbnb</span><span><i style="background:#2C5DA9"></i>Booking</span><span><i style="background:#C9822F"></i>e-chalupy</span><span><i style="background:#2F7D57"></i>Přímá rezervace z webu</span>' }));
+    b.appendChild(el('div', { class: 'vs-adm' }, [el('div', { class: 'bar', html: '<i></i><i></i><i></i><span style="margin-left:6px">Kalendář · synchronizace každých 15 minut (ukázka)</span>' }), tl]));
+    b.appendChild(el('p', { class: 'small', text: 'Přímá rezervace z webu se sama propíše na Airbnb, Booking i e-chalupy (exportní kalendář iCal), takže termín nikdo neprodá dvakrát.' }));
+  }
+
+  function ownerHow(b) {
+    b.appendChild(el('h3', { text: 'Jak to běží po spuštění' }));
+    const steps = (N && N.jakToFunguje) || [];
+    b.appendChild(el('ol', { class: 'vs-flow' }, steps.map((s) => el('li', {}, [el('b', { text: s[0] }), el('span', { class: 'muted', text: s[1] })]))));
+    if (N && N.reference) b.appendChild(el('p', { class: 'small', html: esc(N.reference.text) + ' <a href="' + esc(N.reference.url) + '" target="_blank" rel="noopener">' + esc(N.reference.url.replace(/^https?:\/\//, '')) + '</a>' }));
+    if (O.demo && O.demo.zdroj) b.appendChild(el('p', { class: 'small', text: O.demo.zdroj }));
+  }
+
+  function ownerCta() {
+    const k = (N && N.kontakt) || {};
+    const subject = encodeURIComponent('Web pro ' + O.nazev);
+    return el('div', { class: 'vs-cta' }, [
+      el('a', { href: 'mailto:' + (k.email || '') + '?subject=' + subject, text: 'Mám zájem — napište mi' }),
+      k.telefon ? el('a', { class: 'sec', href: 'tel:' + k.telefon.replace(/\s/g, ''), text: 'Zavolat ' + k.telefon }) : null,
+      el('a', { class: 'sec', href: '#', text: 'Tuhle ukázku nechci — smažte ji', onclick: (e) => { e.preventDefault(); location.href = 'mailto:' + (k.email || '') + '?subject=' + encodeURIComponent('Smazat ukázku ' + O.nazev); } }),
+    ]);
+  }
+
+  /* V demu předvybere první volný pátek (aspoň 3 týdny dopředu) na minimální délku
+     pobytu dané sezóny — majitel hned vidí kalkulaci, aniž by musel klikat. */
+  function preselect() {
+    const today = new Date(); today.setHours(0, 0, 0, 0);
+    let k = addDays(dkey(today), 21);
+    for (let i = 0; i < 200; i++, k = addDays(k, 1)) {
+      if (toD(k).getDay() !== 5) continue;
+      const s = seasonFor(k);
+      const n = s.vikend ? s.vikend.noci : Math.max(2, s.minNoci || C.minNoci || 2);
+      const e = addDays(k, n);
+      let hol = false; for (let x = k; x < e; x = addDays(x, 1)) if (inAnyPkg(x)) hol = true;
+      if (!hol && rangeFree(k, e)) {
+        state.s0 = k; state.s1 = e;
+        state.calOff = Math.max(0, (toD(k).getFullYear() - today.getFullYear()) * 12 + toD(k).getMonth() - today.getMonth());
+        return;
+      }
+    }
+  }
+
+  /* Ladění: ?debug zpřístupní výpočet ceny z konzole (testy ceníků bez klikání v kalendáři). */
+  try { if (/[?&]debug\b/.test(location.search)) window.__vs = { computeQuote, seasonFor, rangeFree }; } catch (e) { /* nic */ }
+
+  /* ---------------- start ---------------- */
+  function renderAll() {
+    document.title = O.nazev + ' — ' + [L(O.typ), O.obec].filter(Boolean).join(', ');
+    renderNav(); renderHero(); renderRatings(); renderAbout(); renderGallery(); renderAmenities(); renderLocation();
+    renderPrices(); renderCalendar(); renderForm(); renderQuote(); renderInfo(); renderFoot();
+    if (DEMO) {
+      $('#vs-demobar .txt').innerHTML = '<b>Ukázka webu: ' + esc(O.nazev) + '</b><span class="sub">' + esc(O.demo.lista || 'Neoficiální návrh z veřejných údajů inzerátu') + ' · ' + esc(fmtDateCs(O.demo.datum)) + '</span>';
+    }
+  }
+  function fmtDateCs(iso) { if (!iso) return ''; const d = new Date(iso + 'T12:00:00'); return d.getDate() + '. ' + (d.getMonth() + 1) + '. ' + d.getFullYear(); }
+
+  async function init() {
+    const root = $('.vs-root');
+    root.style.setProperty('--accent', O.akcent || '#A85D32');
+    if (O.akcentText) root.style.setProperty('--accent-ink', O.akcentText);
+    root.setAttribute('data-motiv', O.motiv || 'den');
+    root.setAttribute('data-demo', DEMO ? '1' : '0');
+    $('#vs-demobar').hidden = !DEMO; $('#vs-fab').hidden = !DEMO;
+    initLang(); document.documentElement.lang = state.lang;
+    await loadAvailability();
+    if (DEMO) preselect();
+    renderAll();
+    $('#vs-prev').onclick = () => { if (state.calOff > 0) { state.calOff--; renderCalendar(); } };
+    $('#vs-next').onclick = () => { if (state.calOff < CAL_MAX) { state.calOff++; renderCalendar(); } };
+    ['#vs-adults', '#vs-children', '#vs-pets'].forEach((id) => $(id).addEventListener('input', renderQuote));
+    $('#vs-form').addEventListener('submit', submitForm);
+    $('#vs-again').onclick = () => { $('#vs-ok').hidden = true; $('#vs-form').hidden = false; };
+    wireLb();
+    $('#vs-fab').onclick = () => openOwner();
+    $('#vs-demobar button').onclick = () => openOwner('nabidka');
+    $('#vs-owner .shade').onclick = closeOwner;
+    $('#vs-owner .close').onclick = closeOwner;
+    const nav = $('#vs-nav');
+    const onScroll = () => nav.classList.toggle('solid', window.scrollY > window.innerHeight * 0.6);
+    window.addEventListener('scroll', onScroll, { passive: true }); onScroll();
+    if (DEMO && /[#&]majitel/.test(location.hash)) openOwner();
+    window.addEventListener('hashchange', () => { if (DEMO && /[#&]majitel/.test(location.hash)) openOwner(); });
+  }
+  init();
+})();
+
+</script>
+</body>
+</html>
