@@ -1,0 +1,443 @@
+<!doctype html>
+<html lang="cs">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="robots" content="noindex, nofollow">
+<title>Web pro vaši chalupu · Pavel Kubizňák</title>
+<meta name="description" content="Pošlete mi své nejlepší fotky a já vám udělám web, který se vám bude líbit. Týden zdarma, pak je celý váš.">
+<link rel="preload" href="img/hero.jpg" as="image">
+<link rel="stylesheet" href="fonts/fonts.css">
+<style>
+:root{
+  --noc:#0d121c; --noc2:#151c2a; --papir:#f3eee5; --papir2:#e9e2d5;
+  --ink:#1c1a16; --ink2:#5b554b; --linka:#d8cfbf;
+  --lampa:#e9a75c; --lampa-t:#a95f1f; --sv:#fff8ec;
+  --serif:'Newsreader',Georgia,serif; --sans:'Archivo',system-ui,sans-serif;
+  --gut:clamp(16px,5vw,64px); --max:1180px;
+}
+*{box-sizing:border-box}
+html{-webkit-text-size-adjust:100%}
+body{margin:0;background:var(--papir);color:var(--ink);font:400 17px/1.6 var(--sans);overflow-x:hidden}
+img{max-width:100%;display:block}
+a{color:inherit}
+h1,h2,h3{font-family:var(--serif);font-weight:400;letter-spacing:-.015em;line-height:1.05;margin:0}
+p{margin:0 0 1em}
+.wrap{max-width:var(--max);margin:0 auto;padding:0 var(--gut)}
+.kicker{font:600 12px/1.3 var(--sans);letter-spacing:.16em;text-transform:uppercase}
+.btn{display:inline-flex;align-items:center;gap:.6em;padding:15px 26px;border-radius:999px;font:600 16px/1 var(--sans);text-decoration:none;border:0;cursor:pointer;transition:transform .2s,background .2s}
+.btn:hover{transform:translateY(-1px)}
+.btn-lampa{background:var(--lampa);color:#1d1308}
+.btn-lampa:hover{background:#f2b46c}
+.btn-duch{background:rgba(255,255,255,.08);color:#fff;box-shadow:inset 0 0 0 1px rgba(255,255,255,.4);backdrop-filter:blur(6px)}
+.doplnit{background:#ffe066;color:#3a2e00;padding:0 .3em;border-radius:3px;font-style:normal}
+
+/* návrhová lišta */
+.navrh{position:absolute;z-index:30;top:0;left:0;right:0;text-align:center;padding:6px 12px;font:500 12px/1.3 var(--sans);color:#3a2e00;background:#ffe066}
+
+/* ---------- ÚVOD: fotka → telefon ---------- */
+.scrolly{position:relative;height:250vh;height:250svh;background:var(--noc)}
+.stage{position:sticky;top:0;height:100vh;height:100svh;overflow:hidden}
+.frame{position:absolute;left:0;top:0;width:100%;height:100%;overflow:hidden;will-change:width,height,left,top;background:#000}
+.frame>img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:calc(58% - 8% * var(--b,0)) 55%}
+.frame .stin{position:absolute;inset:0;background:linear-gradient(180deg,rgba(8,12,22,.55) 0%,rgba(8,12,22,0) 26%,rgba(8,12,22,0) 45%,rgba(8,12,22,.82) 100%)}
+.frame .stin{opacity:calc(1 - var(--b,0)*.5)}
+.bezel{position:absolute;inset:0;border-radius:inherit;pointer-events:none;box-shadow:inset 0 0 0 calc(var(--b,0)*10px) #0a0a0a, inset 0 0 0 calc(var(--b,0)*11px) #3a3a3a;opacity:var(--b,0)}
+.hero-txt{text-shadow:0 1px 18px rgba(0,0,0,.35);position:absolute;left:0;right:0;bottom:0;padding:0 var(--gut) clamp(28px,7vh,72px);color:#fff;opacity:calc(1 - var(--p,0)*3.2);transform:translateY(calc(var(--p,0)*-60px))}
+.hero-txt .in{max-width:var(--max);margin:0 auto}
+.hero-txt .kicker{color:var(--lampa);margin-bottom:18px}
+.hero-txt h1{font-size:clamp(36px,5vw,76px);max-width:10.5em;text-wrap:balance}
+@media (min-width:860px){.hero-txt .in{padding-right:44%}.frame .stin{background:linear-gradient(90deg,rgba(8,12,22,.78) 0%,rgba(8,12,22,.45) 38%,rgba(8,12,22,0) 62%),linear-gradient(180deg,rgba(8,12,22,.4) 0%,rgba(8,12,22,0) 20%,rgba(8,12,22,0) 70%,rgba(8,12,22,.5) 100%)}}
+.hero-txt h1 em{font-style:italic;color:var(--sv)}
+.hero-txt .sub{font-size:clamp(17px,1.6vw,21px);max-width:34em;margin:22px 0 28px;color:rgba(255,255,255,.88)}
+.hero-txt .sub b{color:#fff;font-weight:600}
+.cta{display:flex;flex-wrap:wrap;gap:12px}
+.popisek{position:absolute;top:42px;right:var(--gut);color:rgba(255,255,255,.75);font:italic 400 15px/1.3 var(--serif);opacity:calc(1 - var(--p,0)*4);text-align:right}
+.dolu{position:absolute;left:50%;bottom:12px;transform:translateX(-50%);color:rgba(255,255,255,.6);font-size:12px;letter-spacing:.14em;text-transform:uppercase;opacity:calc(1 - var(--p,0)*6)}
+
+/* web uvnitř telefonu */
+.ui{position:absolute;inset:0;opacity:var(--u,0);color:#fff;pointer-events:none}
+.ui .top{position:absolute;top:0;left:0;right:0;padding:30px 18px 0;display:flex;justify-content:space-between;align-items:center}
+.ui .logo{font:400 20px/1 var(--serif)}
+.ui .menu{width:18px;height:12px;border-top:2px solid #fff;border-bottom:2px solid #fff;position:relative}
+.ui .menu:after{content:"";position:absolute;left:0;right:0;top:3px;border-top:2px solid #fff}
+.ui .notch{position:absolute;top:9px;left:50%;width:76px;height:20px;margin-left:-38px;border-radius:12px;background:#0a0a0a}
+.ui .dole{position:absolute;left:12px;right:12px;bottom:14px}
+.ui .nazev{font:400 34px/1 var(--serif);margin-bottom:6px}
+.ui .chips{display:flex;flex-wrap:wrap;gap:5px;margin-bottom:12px}
+.ui .chips span{font-size:10.5px;padding:4px 8px;border-radius:99px;background:rgba(255,255,255,.14);box-shadow:inset 0 0 0 1px rgba(255,255,255,.3)}
+.ui .karta{background:#fff;color:var(--ink);border-radius:14px;padding:12px;box-shadow:0 12px 30px rgba(0,0,0,.35)}
+.ui .r{display:flex;justify-content:space-between;font-size:12px;color:var(--ink2);margin-bottom:4px}
+.ui .r b{color:var(--ink);font-weight:600}
+.ui .cena{font:500 22px/1.1 var(--serif);color:var(--ink);margin:2px 0 10px}
+.ui .cena small{font:400 11px var(--sans);color:var(--ink2)}
+.ui .tl{display:block;text-align:center;background:var(--lampa);color:#1d1308;border-radius:99px;padding:10px;font-weight:600;font-size:13px}
+.vedle{position:absolute;color:#fff;opacity:var(--s,0);transform:translateY(calc((1 - var(--s,0))*24px));pointer-events:none}
+.vedle.on{pointer-events:auto}
+.vedle .kicker{color:var(--lampa);margin-bottom:14px}
+.vedle h2{font-size:clamp(28px,3.4vw,50px);text-wrap:balance}
+.vedle p{color:rgba(255,255,255,.8);margin-top:18px;max-width:30em}
+.vedle a{color:var(--lampa)}
+@media (min-width:860px){ .vedle{left:var(--gut);top:50%;width:42%;max-width:540px;transform:translateY(calc(-50% + (1 - var(--s,0))*24px))} }
+@media (max-width:859px){
+  .vedle{left:var(--gut);right:var(--gut);top:26px}
+  .vedle h2{font-size:26px}
+  .vedle p{font-size:15px;margin-top:10px;line-height:1.5}
+  .vedle .kicker{margin-bottom:8px}
+  .vedle .navic{display:none}
+  .ui .nazev{font-size:27px}
+  .ui .chips span:nth-child(4){display:none}
+  .frame .stin{background:linear-gradient(180deg,rgba(8,12,22,.45) 0%,rgba(8,12,22,0) 18%,rgba(8,12,22,0) 40%,rgba(8,12,22,.72) 62%,rgba(8,12,22,.92) 100%)}
+}
+
+/* ---------- PŘÍBĚH ---------- */
+.pribeh{padding:clamp(72px,12vw,150px) 0 clamp(56px,8vw,100px)}
+.pribeh .uvod{font:300 clamp(30px,4.4vw,60px)/1.12 var(--serif);max-width:20em;letter-spacing:-.02em;text-wrap:balance}
+.pribeh .uvod em{color:var(--lampa-t)}
+.pribeh .grid{display:grid;grid-template-columns:1fr;gap:40px;margin-top:clamp(40px,6vw,80px)}
+@media (min-width:900px){.pribeh .grid{grid-template-columns:5fr 6fr;gap:72px;align-items:start}}
+.text p{font-size:18px;line-height:1.7}
+.text p:first-child::first-letter{font:400 4.2em/.8 var(--serif);float:left;margin:.08em .1em 0 0;color:var(--lampa-t)}
+.podpis{font:italic 400 30px/1 var(--serif);margin-top:10px}
+.podpis small{display:block;font:400 14px/1.4 var(--sans);font-style:normal;color:var(--ink2);margin-top:8px}
+.foto-pavel{aspect-ratio:4/5;border-radius:4px;background:repeating-linear-gradient(45deg,#ffe066 0 14px,#ffeb99 14px 28px);display:flex;align-items:center;justify-content:center;text-align:center;padding:24px;color:#3a2e00;font-size:15px}
+.kolaz{display:grid;grid-template-columns:1fr 1fr;gap:12px}
+.kolaz figure{margin:0}
+.kolaz img{width:100%;height:100%;object-fit:cover;border-radius:4px}
+.kolaz .velka{grid-column:1/-1;aspect-ratio:16/10}
+.kolaz .mala{aspect-ratio:1/1}
+figcaption{font:italic 400 14px/1.4 var(--serif);color:var(--ink2);margin-top:6px}
+.dukazy{margin-top:clamp(56px,8vw,96px);border-top:1px solid var(--linka);display:grid;grid-template-columns:repeat(2,1fr)}
+@media (min-width:900px){.dukazy{grid-template-columns:repeat(3,1fr)}}
+.dukazy div{padding:26px 18px 26px 0;border-bottom:1px solid var(--linka)}
+.dukazy b{display:block;font:400 clamp(40px,5vw,64px)/1 var(--serif);color:var(--lampa-t);margin-bottom:8px}
+.dukazy span{font-size:15px;line-height:1.45;color:var(--ink2);display:block;max-width:18em}
+
+/* ---------- NABÍDKA ---------- */
+.nabidka{background:var(--noc);color:#fff;padding:clamp(72px,11vw,140px) 0;position:relative;overflow:hidden}
+.nabidka:before{content:"";position:absolute;right:-20%;top:-30%;width:70%;aspect-ratio:1;background:radial-gradient(circle,rgba(233,167,92,.18),transparent 65%);pointer-events:none}
+.nabidka .kicker{color:var(--lampa)}
+.nabidka h2{font-size:clamp(36px,5.6vw,80px);margin:16px 0 0;max-width:12em;text-wrap:balance}
+.nabidka h2 em{color:var(--lampa)}
+.kroky{list-style:none;margin:clamp(48px,7vw,88px) 0 0;padding:0;counter-reset:k}
+.kroky li{counter-increment:k;display:grid;grid-template-columns:72px 1fr;gap:6px 18px;padding:26px 0;border-top:1px solid rgba(255,255,255,.14)}
+@media (min-width:900px){.kroky li{grid-template-columns:140px 340px 1fr;gap:32px;align-items:baseline}}
+.kroky li:before{content:counter(k,decimal-leading-zero);font:300 40px/1 var(--serif);color:rgba(255,255,255,.35);grid-row:span 2}
+@media (min-width:900px){.kroky li:before{font-size:64px;grid-row:auto}}
+.kroky h3{font-size:clamp(24px,2.6vw,34px)}
+.kroky p{margin:0;color:rgba(255,255,255,.75)}
+.kroky li.zlom h3{color:var(--lampa)}
+.vase{margin-top:clamp(56px,8vw,96px);display:grid;gap:16px}
+@media (min-width:900px){.vase{grid-template-columns:1.2fr 1fr 1fr}}
+.vase .box{border-radius:6px;padding:28px;background:var(--noc2);box-shadow:inset 0 0 0 1px rgba(255,255,255,.08)}
+.vase .box.hl{background:var(--sv);color:var(--ink)}
+.vase h3{font-size:28px;margin-bottom:14px}
+.vase .cena{font:400 44px/1 var(--serif);margin:4px 0 4px}
+.vase .cena small{font:400 15px var(--sans);opacity:.7}
+.vase ul{margin:14px 0 0;padding:0;list-style:none}
+.vase li{padding:8px 0 8px 26px;position:relative;border-top:1px solid rgba(0,0,0,.08);font-size:16px}
+.vase .box:not(.hl) li{border-color:rgba(255,255,255,.1);color:rgba(255,255,255,.8)}
+.vase li:before{content:"";position:absolute;left:2px;top:15px;width:12px;height:7px;border-left:2px solid var(--lampa-t);border-bottom:2px solid var(--lampa-t);transform:rotate(-45deg)}
+.vase .box:not(.hl) li:before{border-color:var(--lampa)}
+.vase .box p{color:rgba(255,255,255,.75);font-size:16px}
+
+/* ---------- CO WEB UMÍ ---------- */
+.umi{padding:clamp(72px,11vw,140px) 0}
+.umi .grid{display:grid;gap:48px}
+@media (min-width:900px){.umi .grid{grid-template-columns:1fr 1fr;gap:72px;align-items:center}}
+.umi h2{font-size:clamp(34px,4.6vw,62px);text-wrap:balance}
+.umi ol{margin:32px 0 0;padding:0;list-style:none}
+.umi li{padding:16px 0;border-top:1px solid var(--linka);display:grid;grid-template-columns:28px 1fr;gap:12px}
+.umi li i{font:italic 400 20px/1.3 var(--serif);color:var(--lampa-t)}
+.umi li b{font-weight:600}
+.okno{border-radius:12px;overflow:hidden;box-shadow:0 30px 70px -20px rgba(40,30,10,.35),0 0 0 1px rgba(0,0,0,.06);background:#fff}
+.okno .lista{display:flex;gap:6px;padding:10px 12px;background:#efe9df}
+.okno .lista i{width:10px;height:10px;border-radius:50%;background:#d6cbb9}
+.okno .lista span{margin-left:10px;font-size:12px;color:var(--ink2)}
+
+/* ---------- POCTIVĚ + OTÁZKY ---------- */
+.poctive{background:var(--papir2);padding:clamp(64px,9vw,120px) 0}
+.poctive .grid{display:grid;gap:40px}
+@media (min-width:900px){.poctive .grid{grid-template-columns:1fr 1fr;gap:72px}}
+.poctive h2{font-size:clamp(32px,4vw,52px)}
+.poctive .velke{font:300 clamp(22px,2.2vw,28px)/1.35 var(--serif)}
+.priklad{background:var(--papir);border-left:3px solid var(--lampa-t);padding:20px 22px;font-size:16px;margin-top:24px}
+details{border-top:1px solid var(--linka);padding:18px 0}
+details:last-child{border-bottom:1px solid var(--linka)}
+summary{cursor:pointer;list-style:none;font:400 21px/1.3 var(--serif);display:flex;justify-content:space-between;gap:16px}
+summary::-webkit-details-marker{display:none}
+summary:after{content:"+";font:300 26px/1 var(--sans);color:var(--lampa-t);transition:transform .2s}
+details[open] summary:after{transform:rotate(45deg)}
+details p{margin:12px 0 0;color:var(--ink2);font-size:16px;max-width:36em}
+
+/* ---------- ZÁVĚR ---------- */
+.zaver{position:relative;color:#fff;padding:clamp(96px,14vw,180px) 0 clamp(64px,8vw,100px);overflow:hidden}
+.zaver>img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:50% 60%}
+.zaver:after{content:"";position:absolute;inset:0;background:linear-gradient(90deg,rgba(8,12,22,.9),rgba(8,12,22,.55) 60%,rgba(8,12,22,.35))}
+.zaver .wrap{position:relative;z-index:1;display:grid;gap:40px}
+@media (min-width:900px){.zaver .wrap{grid-template-columns:1fr 460px;gap:64px;align-items:center}}
+.zaver h2{font-size:clamp(38px,5.4vw,78px);text-wrap:balance}
+.zaver h2 em{color:var(--lampa)}
+.zaver .sub{font-size:19px;color:rgba(255,255,255,.85);margin-top:20px;max-width:28em}
+form{background:var(--sv);color:var(--ink);border-radius:10px;padding:26px;box-shadow:0 30px 80px rgba(0,0,0,.4)}
+form h3{font-size:26px;margin-bottom:6px}
+form .pozn{font-size:14px;color:var(--ink2);margin-bottom:16px}
+label{display:block;font-size:14px;font-weight:600;margin:12px 0 5px}
+input[type=text],input[type=url],input[type=email],input[type=tel]{width:100%;font:400 16px var(--sans);padding:12px 14px;border:1px solid var(--linka);border-radius:6px;background:#fff;color:var(--ink)}
+input:focus{outline:2px solid var(--lampa);outline-offset:1px}
+.souhlas{display:flex;gap:10px;font-weight:400;font-size:13px;line-height:1.45;color:var(--ink2);margin-top:16px}
+.souhlas input{margin-top:3px;flex:none}
+form .btn{width:100%;justify-content:center;margin-top:18px}
+.kontakt-box{background:var(--sv);color:var(--ink);border-radius:10px;padding:26px;box-shadow:0 30px 80px rgba(0,0,0,.4)}
+.kontakt-box h3{font-size:26px;margin-bottom:6px}
+.kontakt-box .pozn{font-size:14px;color:var(--ink2);margin-bottom:16px}
+.kontakt-box .btn{width:100%;justify-content:center;margin-top:12px}
+.btn-obrys{background:#fff;color:var(--ink);box-shadow:inset 0 0 0 1px var(--linka)}
+.odeslano{display:none;margin-top:14px;padding:12px;border-radius:6px;background:#fff3c4;font-size:14px}
+footer{background:var(--noc);color:rgba(255,255,255,.6);font-size:14px;padding:32px 0}
+footer .wrap{display:flex;flex-wrap:wrap;gap:8px 24px;justify-content:space-between}
+
+@media (prefers-reduced-motion:reduce){ .btn{transition:none} }
+</style>
+</head>
+<body>
+
+
+<!-- ÚVOD: fotka přes celou obrazovku, při posunu se zmenší do telefonu -->
+<section class="scrolly" id="uvod">
+  <div class="stage">
+    <div class="frame" id="frame">
+      <img src="img/hero.jpg" alt="Villa Rudolf v zimní noci, rozsvícená okna, sníh a měsíc" width="1600" height="1066" fetchpriority="high">
+      <div class="stin"></div>
+      <div class="ui" aria-hidden="true">
+        <div class="notch"></div>
+        <div class="top"><span class="logo">Villa Rudolf</span><span class="menu"></span></div>
+        <div class="dole">
+          <div class="nazev">Villa Rudolf</div>
+          <div class="chips"><span>až 22 hostů</span><span>sauna</span><span>bazén</span><span>Krkonoše</span></div>
+          <div class="karta">
+            <div class="r"><span>Příjezd</span><b>pá 15. 1. 2027</b></div>
+            <div class="r"><span>Odjezd</span><b>po 18. 1. 2027</b></div>
+            <div class="cena">44 700 Kč <small>· 3 noci, celý dům</small></div>
+            <span class="tl">Poslat poptávku</span>
+          </div>
+        </div>
+      </div>
+      <div class="bezel"></div>
+    </div>
+
+    <div class="popisek">Villa Rudolf, Krkonoše.<br>Moje vila, můj web.</div>
+
+    <div class="hero-txt">
+      <div class="in">
+        <div class="kicker" id="pro">Pro majitele chalup a vil</div>
+        <h1>Pošlete mi své nejlepší fotky. Udělám vám web, <em>který se vám bude líbit.</em></h1>
+        <p class="sub">Týden ho máte <b>zdarma</b>. Když se vám líbí, je <b>celý váš</b>, i se všemi hesly. Když ne, dám ho pryč.</p>
+        <div class="cta">
+          <a class="btn btn-lampa" href="#napiste">Poslat fotky</a>
+          <a class="btn btn-duch" href="#pribeh">Kdo jsem ↓</a>
+        </div>
+      </div>
+    </div>
+    <div class="dolu">posuňte dolů</div>
+
+    <div class="vedle" id="vedle">
+      <div class="kicker">Tohle je web mé vily</div>
+      <h2>Host uvidí dům. Vybere termín. Hned zná cenu.</h2>
+      <p>A pošle poptávku přímo vám, bez portálu a bez provize. Přesně tohle udělám z vašich fotek.</p>
+      <p class="navic"><a href="https://villarudolf.com" target="_blank" rel="noopener">villarudolf.com ↗</a> &nbsp;·&nbsp; zkuste si ho na mobilu</p>
+    </div>
+  </div>
+</section>
+
+<!-- PŘÍBĚH -->
+<section class="pribeh" id="pribeh">
+  <div class="wrap">
+    <div class="kicker" style="color:var(--lampa-t);margin-bottom:22px">Jsem Pavel</div>
+    <p class="uvod">Koupil jsem starou vilu v Krkonoších. Nejtěžší nebyla rekonstrukce. <em>Nejtěžší bylo, aby si nás hosté našli.</em></p>
+
+    <div class="grid">
+      <div>
+        <div class="text">
+          <p>Opravili jsme ji a dnes ji pronajímám celou, skupinám až pro 22 lidí.</p>
+          <p>Brzy jsem zjistil dvě věci. Portály si z každé rezervace berou 15 až 19 procent. A hosté, kteří se k nám vracejí, nás stejně hledají podle jména.</p>
+          <p>Tak jsem si udělal vlastní web. Pak kalendář, aby se termín neprodal dvakrát. Pak ceník na dva roky dopředu, smlouvy na jedno kliknutí a zámek, ke kterému dostane každý host svůj kód.</p>
+          <p>Nejsem agentura. Jsem majitel jako vy. Vím, co host potřebuje vidět, než napíše. A vím, jak naštve web, který nefunguje.</p>
+          <p><b>Teď to umím udělat i vám.</b></p>
+        </div>
+        <div class="podpis">Pavel Kubizňák<small>majitel Villy Rudolf, Svoboda nad Úpou</small></div>
+      </div>
+      <div class="kolaz">
+        <figure class="velka" style="margin:0">
+          <img src="img/leto.jpg" alt="Villa Rudolf v létě" loading="lazy" style="width:100%;aspect-ratio:16/10;object-fit:cover;border-radius:4px;display:block">
+        </figure>
+        <figure><img class="mala" src="img/zima.jpg" alt="Vila v zimě v noci pod lípou" loading="lazy" width="1600" height="1067"><figcaption>Leden. Sníh až ke dveřím.</figcaption></figure>
+        <figure><img class="mala" src="img/altan.jpg" alt="Altán se stolem pro celou skupinu" loading="lazy" width="1600" height="1066"><figcaption>Altán pro celou partu.</figcaption></figure>
+      </div>
+    </div>
+
+    <div class="dukazy">
+      <div><b>6</b><span>míst, kde vilu prodávám: Booking, Airbnb, FeWo, e-chalupy, Megaubytko a vlastní web</span></div>
+      <div><b>24</b><span>měsíců dopředu mám ceník podle prázdnin v zemích, odkud hosté jezdí</span></div>
+      <div><b>⅓</b><span>hostů jezdí z východního Německa. Vím to z domovní knihy, ne z odhadu.</span></div>
+      <div><b>1</b><span>kliknutí a mám smlouvu česky, německy nebo anglicky</span></div>
+      <div><b>0</b><span>papírů při hlášení cizinců. Hosté se registrují online.</span></div>
+      <div><b>0</b><span>čekání na klíče. Host dostane kód od dveří.</span></div>
+    </div>
+  </div>
+</section>
+
+<!-- NABÍDKA -->
+<section class="nabidka" id="nabidka">
+  <div class="wrap">
+    <div class="kicker">Jak to funguje</div>
+    <h2>Týden zdarma. Pak je to <em>váš web</em>, nebo žádný.</h2>
+
+    <ol class="kroky">
+      <li><h3>Pošlete mi fotky</h3><p>Vaše nejlepší, klidně z mobilu. A odkaz na inzerát, ať vím, co o chalupě píšete.</p></li>
+      <li><h3>Udělám vám web</h3><p>Z vašich fotek a textů. Česky, německy, polsky a anglicky. S kalendářem a cenou.</p></li>
+      <li><h3>Týden je váš. Zdarma.</h3><p>Klikejte, ukažte ho rodině, pošlete ho hostům. Dělejte si s ním, co chcete.</p></li>
+      <li class="zlom"><h3>Líbí se? Je váš.</h3><p>Zaplatíte jednou a dostanete všechno: doménu na své jméno, všechna hesla, všechny soubory.</p></li>
+      <li><h3>Nelíbí se? Dám ho pryč.</h3><p>Nic neplatíte a už se neozvu. Fotky smažu.</p></li>
+    </ol>
+
+    <div class="vase">
+      <div class="box hl">
+        <h3>Web je váš</h3>
+        <div class="cena">9 900 Kč <small>jednou</small></div>
+        <ul>
+          <li>Doména na vaše jméno (asi 300 Kč za rok)</li>
+          <li>Všechna hesla, od prvního dne</li>
+          <li>Soubory webu si můžete odnést kamkoli</li>
+          <li>Z rezervací si neberu nic. Nikdy.</li>
+        </ul>
+      </div>
+      <div class="box">
+        <h3>Postarám se já</h3>
+        <div class="cena">990 Kč <small>za rok</small></div>
+        <p>Provoz, změny cen a textů, pomoc po telefonu ve všední dny. Kdykoli můžete skončit.</p>
+      </div>
+      <div class="box">
+        <h3>Postaráte se sami</h3>
+        <div class="cena">0 Kč</div>
+        <p>Je to tak jednoduché, že to zvládnete. Ukážu vám jak, hesla máte.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- CO WEB UMÍ -->
+<section class="umi">
+  <div class="wrap grid">
+    <div>
+      <div class="kicker" style="color:var(--lampa-t);margin-bottom:18px">Co web umí</div>
+      <h2>Ne vizitka. Web, přes který se dá zarezervovat.</h2>
+      <ol>
+        <li><i>i</i><span><b>Kalendář napojený na portály.</b> Booking, Airbnb, e-chalupy a další. Termín nikdo neprodá dvakrát.</span></li>
+        <li><i>ii</i><span><b>Cena hned po výběru termínu.</b> Podle vašeho ceníku: sezóny, minimum nocí, úklid, poplatek obci.</span></li>
+        <li><i>iii</i><span><b>Poptávka do mobilu i e-mailem.</b> Hned, jak ji host pošle.</span></li>
+        <li><i>iv</i><span><b>Záloha přes QR platbu.</b> Nezaplacený termín se sám uvolní.</span></li>
+        <li><i>v</i><span><b>Čtyři jazyky.</b> Pro hosty z Česka, Německa, Polska a odjinud.</span></li>
+      </ol>
+    </div>
+    <div class="okno">
+      <div class="lista"><i></i><i></i><i></i><span>villarudolf.com · termíny a ceny</span></div>
+      <img src="img/ukazka-kalendar.jpg" alt="Kalendář s volnými termíny a cenou na webu Villy Rudolf" loading="lazy">
+    </div>
+  </div>
+</section>
+
+<!-- POCTIVĚ + OTÁZKY -->
+<section class="poctive">
+  <div class="wrap grid">
+    <div>
+      <div class="kicker" style="color:var(--lampa-t);margin-bottom:18px">Poctivě</div>
+      <h2>Web vám sám nové hosty nepřivede.</h2>
+      <p class="velke" style="margin-top:22px">Přesune k vám ty, kdo vás už znají: hosty, kteří se vracejí, jejich známé a ty, kdo vás našli na portálu a pak hledají vaše jméno. Portály nerušte. Web je druhá noha, ne náhrada.</p>
+      <div class="priklad"><b>Příklad:</b> z portálů máte za rok 800 000 Kč a napřímo k vám přejde každý desátý host. Na provizi ušetříte asi 15 000 Kč za rok. Web se zaplatí do roka. Odhad, ne slib.</div>
+    </div>
+    <div>
+      <details open><summary>Co když se mi web nebude líbit?</summary><p>Řeknete mi to a já ho dám pryč, i s vašimi fotkami. Nic neplatíte. Týden na vyzkoušení je opravdu zdarma.</p></details>
+      <details><summary>Platím vám něco z každé rezervace?</summary><p>Ne. 9 900 Kč jednou. Když chcete, abych se o web staral, 990 Kč za rok. Žádná provize.</p></details>
+      <details><summary>Co přesně je „všechno vaše“?</summary><p>Doména na vaše jméno, přístup k hostingu, všechna hesla a soubory webu. Můžete ho kdykoli odnést jinam nebo dát někomu jinému.</p></details>
+      <details><summary>Mám zrušit Booking a Airbnb?</summary><p>Ne. Portály vám přivádějí nové hosty. Web je pro ty, kdo vás už znají. Kalendář hlídá, aby se termín neprodal dvakrát.</p></details>
+      <details><summary>Potřebujete moje hesla k portálům?</summary><p>Ne. Kalendář napojím přes odkaz, který každý portál dává zdarma.</p></details>
+      <details><summary>Pro koho to není?</summary><p>Pro hotely a penziony s recepcí a pro malé chaty, kde stačí jeden portál. Dává to smysl u domů pro 10 a více hostů, které se pronajímají celé.</p></details>
+    </div>
+  </div>
+</section>
+
+<!-- ZÁVĚR -->
+<section class="zaver" id="napiste">
+  <img src="img/vecer.jpg" alt="Večer u vily: osvětlený bazén, ohniště a altán" loading="lazy" width="1600" height="1200">
+  <div class="wrap">
+    <div>
+      <div class="kicker" style="color:var(--lampa);margin-bottom:18px">Začněte fotkami</div>
+      <h2>Pošlete mi fotky. <em>Za týden se díváte na svůj web.</em></h2>
+      <p class="sub">Napište mi, o jakou chalupu jde. Ozvu se vám a domluvíme se, jak mi fotky pošlete.</p>
+    </div>
+    <div class="kontakt-box">
+      <h3>Chci web na týden zdarma</h3>
+      <p class="pozn">Bez závazku. Když se nebude líbit, nic neplatíte.</p>
+      <a class="btn btn-lampa" href="tel:+420775220785">Zavolat 775 220 785</a>
+      <a class="btn btn-obrys" href="mailto:pavel.kubiznak@gmail.com?subject=Web%20pro%20moji%20chalupu">Napsat e-mail</a>
+      <p class="pozn" style="margin-top:14px;text-align:center">pavel.kubiznak@gmail.com</p>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <div class="wrap">
+    <span>Pavel Kubizňák · Villa Rudolf, Svoboda nad Úpou</span>
+    <span>Telefon <a href="tel:+420775220785" style="color:inherit">775 220 785</a> · e-mail <a href="mailto:pavel.kubiznak@gmail.com" style="color:inherit">pavel.kubiznak@gmail.com</a></span>
+  </div>
+</footer>
+
+<script>
+(function(){
+  // Personalizace: ?o=Název chalupy
+  var o = new URLSearchParams(location.search).get('o');
+  if (o) { document.getElementById('pro').textContent = 'Připraveno pro: ' + o.slice(0,60); }
+
+
+  // Úvod: fotka přes celou obrazovku se při posunu zmenší do telefonu
+  var sc = document.getElementById('uvod'), fr = document.getElementById('frame'),
+      ved = document.getElementById('vedle'), root = sc;
+  function lerp(a,b,t){ return a + (b-a)*t; }
+  function ease(t){ return t<.5 ? 4*t*t*t : 1 - Math.pow(-2*t+2,3)/2; }
+  function clamp(x){ return Math.max(0, Math.min(1, x)); }
+  var ticking = false;
+  function draw(){
+    ticking = false;
+    var vw = document.documentElement.clientWidth, vh = sc.querySelector('.stage').clientHeight;
+    var r = sc.getBoundingClientRect();
+    var total = sc.offsetHeight - vh;
+    var p = clamp(-r.top / (total * 0.75));
+    var e = ease(p);
+    var mobil = vw < 860, ph, pw, cx, cy;
+    if (mobil) {
+      ph = Math.min(vh * 0.6, 520); pw = ph / 2.05;
+      cx = vw / 2; cy = vh - ph / 2 - 22;
+    } else {
+      ph = Math.min(vh * 0.82, 680); pw = ph / 2.05;
+      cx = vw * 0.68; cy = vh / 2;
+    }
+    var w = lerp(vw, pw, e), h = lerp(vh, ph, e);
+    fr.style.width = w + 'px'; fr.style.height = h + 'px';
+    fr.style.left = lerp(0, cx - pw/2, e) + 'px'; fr.style.top = lerp(0, cy - ph/2, e) + 'px';
+    fr.style.borderRadius = lerp(0, 38, e) + 'px';
+    root.style.setProperty('--p', p.toFixed(3));
+    root.style.setProperty('--b', clamp((p - .55) / .3).toFixed(3));
+    root.style.setProperty('--u', clamp((p - .7) / .25).toFixed(3));
+    var s = clamp((p - .62) / .3);
+    root.style.setProperty('--s', s.toFixed(3));
+    ved.classList.toggle('on', s > .5);
+  }
+  function req(){ if (!ticking) { ticking = true; requestAnimationFrame(draw); } }
+  addEventListener('scroll', req, {passive:true});
+  addEventListener('resize', req);
+  draw();
+})();
+</script>
+</body>
+</html>
